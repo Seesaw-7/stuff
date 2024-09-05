@@ -41,6 +41,25 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
   
 #### Language
 
+- slices can be assigned, temps are not needed
+  
     ```py
     nums[:k], nums[k:] = nums[-k:], nums[:-k]
+    ```
+
+- define a function inside a function, all parameters in the parent function are available to children, swapping does not need temp in python
+
+    ```py
+    def rotate(self, nums: List[int], k: int) -> None:
+        k = k % len(nums)
+
+        def reverse(left:int, right:int) -> None:
+            while left < right:
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1
+        
+        reverse(0, len(nums)-1)
+        reverse(0, k-1)
+        reverse(k, len(nums)-1)
     ```
