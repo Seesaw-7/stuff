@@ -63,3 +63,15 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
         reverse(0, k-1)
         reverse(k, len(nums)-1)
     ```
+
+### 121 Best Time to Buy and Sell Stock
+
+#### Language
+
+- use `and` `or` for logical comparison, `&` is only a bitwise operator
+- `half = len(l) // 2`
+
+#### Algo
+
+- Think of solving in O(1)
+  
