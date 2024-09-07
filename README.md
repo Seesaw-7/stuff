@@ -2,7 +2,7 @@
 
 ## Array/String
 
-## 80 Remove Duplicates from Sorted Array II
+### 80 Remove Duplicates from Sorted Array II
 
 Compare nums[i] with nums[k-2], where k signals the current valid sequence. 隔空比较
 
@@ -74,4 +74,41 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. 隔�
 #### Algo
 
 - Think of solving in O(1)
-  
+
+### 55
+
+#### Language
+
+- Initialize list with list comprehension
+  `reach = [0 for x in range(len(nums))]`
+- can omit `else:`
+
+    ```py
+    for num in nums:
+        if max_steps < 0:
+            return False
+        elif max_steps < num:
+            max_steps = num
+        max_steps -= 1
+    ```
+
+- use enumerate for lists
+  `for i, num in enumerate(nums):`
+  When using `range(len(nums))`, you manually index into the list, which is less efficient and can be harder to read.
+  While the performance gain is usually small for small datasets, using enumerate avoids the extra call to `len(nums)` and indexing into the list for each iteration.
+
+- save variables to avoid repetative computation
+  `len_nums = len(nums)`
+
+## Graphs
+
+### 45 Jump Game II
+
+#### Algo
+
+[BFS vs DFS](https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/)
+
+#### Language
+
+- access python tuple by index `tup[i]`
+
