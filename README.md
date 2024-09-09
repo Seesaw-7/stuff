@@ -111,4 +111,10 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
 #### Language
 
 - access python tuple by index `tup[i]`
-
+- `list.append(elt)`
+- `list.insert(i, elt)`
+- `list1 + list2`
+- python list will need O(N) to pop from index 0, but queue will take O(1) to pop and put. using deque is common and fast. If thread safety is needed, use queue.Queue(), though a bit slower.
+- create a list of zeros
+  `zeros_list = [0 for _ in range(10)]`
+  `zeros_list = [0] * 10`
