@@ -1,5 +1,8 @@
 # My Leetcode solutions and notes
 
+problems that I did not provide solutions with minimum time complexity
+45 189 274
+
 ## Array/String
 
 ### 80 Remove Duplicates from Sorted Array II
@@ -99,6 +102,53 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
 
 - save variables to avoid repetative computation
   `len_nums = len(nums)`
+
+### 274 H-Index
+
+#### Language
+
+- in-place list methods (l.method()) and non-in-place list methods (method(l))
+  In-Place List Methods
+  Their return type is None, so l.method() is not iterable and cannot be returned
+
+  ```py
+  my_list.append(5)
+
+  # extend(iterable): Adds all elements from the iterable to the end of the list.
+  my_list.extend([6, 7])
+
+  # insert(index, item): Inserts an item at a specified position.
+  my_list.insert(2, 10)
+  
+  # remove(item): Removes the first occurrence of an item from the list.
+  my_list.remove(3)
+  
+  # pop([index]): Removes and returns the item at the given index (last item if index is not specified).
+  my_list.pop(1)
+  
+  # sort(): Sorts the list in ascending order.
+  my_list.sort()
+
+  # reverse(): Reverses the elements of the list in place.
+  my_list.reverse()
+  
+  # clear(): Removes all elements from the list.
+  my_list.clear()
+  ```
+
+  Non-In-Place Methods
+
+  ```py
+  sorted(list) # Returns a new sorted list; does not modify the original.
+  reversed(list) # Returns an iterator that accesses the list in reverse order; does not modify the original.
+  list[start:stop:step] # list slicing
+  ```
+
+- back iteration `for i in range(n, -1, -1):`
+  
+#### Algo
+
+think of doing counting first (counting to list, instead of a dict)
 
 ## Graphs
 
