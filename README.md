@@ -107,6 +107,8 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
 #### Algo
 
 [BFS vs DFS](https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/)
+Greedy BFS
+
 
 #### Language
 
@@ -118,3 +120,16 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
 - create a list of zeros
   `zeros_list = [0 for _ in range(10)]`
   `zeros_list = [0] * 10`
+- python queue, `deque` will be fast, `Queue` will be a bit slower but ensures thread safety
+
+  ```py
+  from collections import deque
+  de = collections.deque([1, 2, 3])
+  # using append() to insert element at right end
+  de.append(4)
+  # using appendleft() to insert element at left end
+  de.appendleft(6)
+  # using pop() to delete element from right end
+  de.pop()
+  de.popleft()
+  ```
