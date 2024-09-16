@@ -323,6 +323,13 @@ think of doing counting first (counting to list, instead of a dict)
   rand_elts = random.sample(elt_list, 3) # randomly select 3 elts from an iterable, returned as a list
   ```
 
+### 238 Product of Array Except Self
+
+#### Language
+
+- back iteration `for i,num in reversed(list(enumerate(nums))):`
+- list comprehension with `zip()`: `answer = [x*y for x,y in zip(forward_prods, back_prods)]`
+
 ## Graphs
 
 ### 45 Jump Game II

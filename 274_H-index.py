@@ -8,7 +8,7 @@ class Solution:
         while num_paper_satisfied >= h_index:
             h_index += 1
             num_paper_satisfied = 0
-            for i, cit in enumerate(citations):
+            for cit in citations:
                 if cit >= h_index:
                     num_paper_satisfied += 1
 
