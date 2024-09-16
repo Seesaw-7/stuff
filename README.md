@@ -150,6 +150,179 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. 隔�
 
 think of doing counting first (counting to list, instead of a dict)
 
+### 380 Insert Delete GetRandom O(1)
+
+#### Algo
+
+- pop one element from a list takes `O(N)`, but swapping it with the last elt and delete the last elt only takes `O(1)`
+
+
+
+#### Language
+
+- see python scope, class and namespace:
+[python class documentation](https://docs.python.org/3/tutorial/classes.html)
+
+  > Objects have individuality, and multiple names (in multiple scopes) can be bound to the same object. This is known as aliasing in other languages. This is usually not appreciated on a first glance at Python, and can be safely ignored when dealing with immutable basic types (numbers, strings, tuples). However, aliasing has a possibly surprising effect on the semantics of Python code involving mutable objects such as lists, dictionaries, and most other types. This is usually used to the benefit of the program, since aliases behave like pointers in some respects. For example, passing an object is cheap since only a pointer is passed by the implementation; and if a function modifies an object passed as an argument, the caller will see the change — this eliminates the need for two different argument passing mechanisms as in Pascal.
+
+
+  Modifying an Object Inside a Function:
+  - Since the function receives a reference to the original object, if you modify the object inside the function, you are modifying the same object that the caller has.
+
+  - This means that changes made within the function will be visible outside of it, as both the caller and the function are accessing the same object in memory.
+    
+
+  ```python
+  def modify_list(my_list):
+      my_list.append(4)
+
+  numbers = [1, 2, 3]
+  modify_list(numbers)
+  print(numbers)  # Output: [1, 2, 3, 4]
+  ```
+
+  Important Note:
+  - While the object itself can be modified inside the function (if it is mutable, like lists, dictionaries, etc.), you cannot change the reference (pointer) to point to a different object within the function.
+  - For example:
+    ```python
+    def reassign_list(my_list):
+        my_list = [4, 5, 6]  # This reassigns the local reference, not the original list
+
+    numbers = [1, 2, 3]
+    reassign_list(numbers)
+    print(numbers)  # Output: [1, 2, 3]
+    ```
+  In this case, `my_list` is reassigned to a new list within the function, but this reassignment does not affect the original `numbers` list.
+
+  > A namespace is a mapping from names to objects. Most namespaces are currently implemented as Python dictionaries, but that’s normally not noticeable in any way (except for performance), and it may change in the future.
+
+  > Namespaces are created at different moments and have different lifetimes. The namespace containing the built-in names is created when the Python interpreter starts up, and is never deleted. The global namespace for a module is created when the module definition is read in; normally, module namespaces also last until the interpreter quits. The statements executed by the top-level invocation of the interpreter, either read from a script file or interactively, are considered part of a module called __main__, so they have their own global namespace. (The built-in names actually also live in a module; this is called builtins.)
+
+  > The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function.
+
+  > A scope is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.
+
+  > Although scopes are determined statically, they are used dynamically. At any time during execution, there are 3 or 4 nested scopes whose namespaces are directly accessible:
+  > - the innermost scope, which is searched first, contains the local names
+  >- the scopes of any enclosing functions, which are searched starting with the nearest enclosing scope, contain non-local, but also non-global names
+  >- the next-to-last scope contains the current module’s global names **`global` means module-level binding**
+  >- the outermost scope (searched last) is the namespace containing built-in names
+
+  > 
+    ```
+    def scope_test():
+      def do_local():
+          spam = "local spam"
+
+      def do_nonlocal():
+          nonlocal spam
+          spam = "nonlocal spam"
+
+      def do_global():
+          global spam
+          spam = "global spam"
+
+      spam = "test spam"
+      do_local()
+      print("After local assignment:", spam)
+      do_nonlocal()
+      print("After nonlocal assignment:", spam)
+      do_global()
+      print("After global assignment:", spam)
+
+    scope_test()
+    print("In global scope:", spam)
+    ```
+    ```
+    After local assignment: test spam
+    After nonlocal assignment: nonlocal spam
+    After global assignment: nonlocal spam
+    In global scope: global spam
+    ```
+  > Note how the local assignment (which is default) didn’t change scope_test's binding of spam. The nonlocal assignment changed scope_test's binding of spam, and the global assignment changed the module-level binding.
+  > You can also see that there was no previous binding for spam before the global assignment.
+
+- class
+  ```
+  class Dog:
+
+      kind = 'canine'         # class variable shared by all instances
+
+      def __init__(self, name):
+          self.name = name    # instance variable unique to each instance
+
+  >>> d = Dog('Fido')
+  >>> e = Dog('Buddy')
+  >>> d.kind                  # shared by all dogs
+  'canine'
+  >>> e.kind                  # shared by all dogs
+  'canine'
+  >>> d.name                  # unique to d
+  'Fido'
+  >>> e.name                  # unique to e
+  'Buddy'
+  ```
+
+- print all dict methods with dir()
+  `print(dir(dict()))`
+
+- dict methods
+  `s.pop(key)`
+
+  popitem(): Removes and returns a random key-value pair as a tuple. In Python 3.7+, it removes the last inserted item.
+  ```py
+  my_dict = {'a': 1, 'b': 2}
+  item = my_dict.popitem()  # Output: ('b', 2)
+  print(my_dict)  
+  ```
+
+  `my_dict.clear()` removes all items
+
+
+
+  ```py
+  my_dict = {'a': 1, 'b': 2}
+  my_dict.update({'c': 3, 'a': 10})
+  print(my_dict)  # Output: {'a': 10, 'b': 2, 'c': 3}
+  ```
+
+  ```py
+  my_dict = {'a': 1, 'b': 2}
+  value = my_dict.get('a')  # Output: 1
+  value = my_dict.get('c', 0)  # Output: 0 (default value)
+  ```
+
+  | Method           | Description                               |
+  |------------------|-------------------------------------------|
+  | `dict[key]`      | Adds or updates key-value pairs          |
+  | `update()`       | Updates with another dictionary or iterable|
+  | `get()`          | Retrieves value by key, with optional default|
+  | `pop()`          | Removes key and returns value            |
+  | `popitem()`      | Removes and returns the last inserted pair|
+  | `clear()`        | Removes all items                        |
+  | `keys()`         | Returns view object of all keys          |
+  | `values()`       | Returns view object of all values        |
+  | `items()`        | Returns view object of all key-value pairs|
+  | `setdefault()`   | Returns value of key or inserts default  |
+  | `copy()`         | Returns a shallow copy of the dictionary |
+
+
+- set methods
+  `s = set()`
+  `s.remove(val)`
+  `s.add(val)`
+
+- `len()` always take O(1)
+
+- random
+
+  ```py
+  import random
+  a = random.randint(0, 2) # both inclusive!!!!!
+  rand_elt = random.choice(self.elt_list)
+  rand_elts = random.sample(elt_list, 3) # randomly select 3 elts from an iterable, returned as a list
+  ```
+
 ## Graphs
 
 ### 45 Jump Game II
