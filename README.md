@@ -327,8 +327,30 @@ think of doing counting first (counting to list, instead of a dict)
 
 #### Language
 
-- back iteration `for i,num in reversed(list(enumerate(nums))):`
+- back iteration
+  `for i,num in reversed(list(enumerate(nums))):`
+  `for i in reversed(list(range(n))):`
 - list comprehension with `zip()`: `answer = [x*y for x,y in zip(forward_prods, back_prods)]`
+
+### 135 Candy
+
+#### Algorithm
+I often design algo with two-pass and DP.
+It is often locally greedy in both the left-to-right and right-to-left passes. Often, the first pass find the max/min values and the second pass revise it to the exact values.
+
+This is very useful in scenarios where an element depends on both of its neighbours (can be next-to neighbours or very far neighbours).
+
+### 42 Trapping Rain Water
+
+#### Algorithm
+
+- I used two-pass and DP
+
+- use stack and finishing up little by little
+
+#### Language
+
+- Python stack is just list, `l.append()`,`l.pop()`, judging empty by `if l:`, peek by `l[-1]`
 
 ## Graphs
 
