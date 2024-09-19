@@ -352,6 +352,13 @@ This is very useful in scenarios where an element depends on both of its neighbo
 
 - Python stack is just list, `l.append()`,`l.pop()`, judging empty by `if l:`, peek by `l[-1]`
 
+
+### 13 Roman to Integer
+
+#### Language
+
+- Use python dict as Macro, dict can also help to compare the defined value of strings
+
 ## Graphs
 
 ### 45 Jump Game II
