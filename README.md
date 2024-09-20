@@ -3,6 +3,9 @@
 problems that I did not provide solutions with minimum time complexity
 45 189 274
 
+problems that I was slow to pass
+12 80 121
+
 ## Array/String
 
 ### 80 Remove Duplicates from Sorted Array II
