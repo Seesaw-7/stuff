@@ -1,5 +1,5 @@
 class Solution:
-    def longestCommonPrefix1(self, strs: List[str]) -> str:
+    def longestCommonPrefix1(self, strs: list[str]) -> str:
         common = strs[0]
 
         for s in strs:
@@ -10,7 +10,7 @@ class Solution:
 
     # Divide and conquer, copied from lc solutions
     # https://leetcode.com/problems/longest-common-prefix/solutions/3224599/easy-and-simple-way-to-find-longest-common-prefix-python-3/?envType=study-plan-v2&envId=top-interview-150
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    def longestCommonPrefix(self, strs: list[str]) -> str:
         if len(strs) <= 1:
             return strs[0]
         low = 0

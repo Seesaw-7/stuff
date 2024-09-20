@@ -98,6 +98,7 @@
   ```py
   sorted(list) # Returns a new sorted list; does not modify the original.
   reversed(list) # Returns an iterator that accesses the list in reverse order; does not modify the original.
+                    # does not return a list
   list[start:stop:step] # list slicing
   ```
 
@@ -289,7 +290,7 @@
 
 Python provides a wide range of string manipulation methods that are very useful for working with and modifying text. Below are some of the most commonly used string manipulation techniques:
 
- 1. **Basic String Operations**
+ 1. Basic String Operations
 
 - Repetition: Repeat strings using the `*` operator.
   
@@ -414,7 +415,7 @@ Python provides a wide range of string manipulation methods that are very useful
   result = a.rstrip()  # "   Hello world"
   ```
 
-### 8. Checking String Properties
+8. Checking String Properties
 
 - Check if String Contains Only Digits:
   
@@ -488,6 +489,13 @@ Python provides a wide range of string manipulation methods that are very useful
 Summary:
 These common string manipulation methods are widely used in Python programming for everything from data cleaning to formatting output. Python strings are immutable, which means that every time you modify a string, a new one is created, so operations like `replace`, `upper`, or `strip` return new strings rather than modifying the original string.
 
+### 151 Reverse Words in a String
+
+    ```py
+        list_words = s.split() # automatically splits words and handles multi-spaces
+        list_words.reverse()
+        return " ".join(list_words)
+    ```
 
 ## Graphs
 
