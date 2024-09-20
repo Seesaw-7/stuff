@@ -4,7 +4,7 @@ problems that I did not provide solutions with minimum time complexity
 45 189 274
 
 problems that I was slow to pass
-12 80 121
+12 58 80 121
 
 ## Array/String
 
@@ -361,6 +361,211 @@ This is very useful in scenarios where an element depends on both of its neighbo
 #### Language
 
 - Use python dict as Macro, dict can also help to compare the defined value of strings
+
+### 58 Length of Last Word
+
+#### Language
+
+Python provides a wide range of string manipulation methods that are very useful for working with and modifying text. Below are some of the most commonly used string manipulation techniques:
+
+ 1. **Basic String Operations**
+
+- Repetition: Repeat strings using the `*` operator.
+  
+  ```python
+  a = "Ha"
+  result = a * 3  # "HaHaHa"
+  ```
+
+
+ 2. Slicing Strings
+
+
+- Step in Slicing: Extract characters with a step.
+  
+  ```python
+  step_substring = a[::2]  # "Hlo" (every second character)
+  ```
+
+ 3. Changing Case
+
+- Convert to Uppercase:
+  
+  ```python
+  a = "hello"
+  result = a.upper()  # "HELLO"
+  ```
+
+- Convert to Lowercase:
+  
+  ```python
+  a = "HELLO"
+  result = a.lower()  # "hello"
+  ```
+
+- Capitalize the First Letter:
+  
+  ```python
+  a = "hello"
+  result = a.capitalize()  # "Hello"
+  ```
+
+- Title Case (Capitalize Each Word):
+  
+  ```python
+  a = "hello world"
+  result = a.title()  # "Hello World"
+  ```
+
+- Swap Case (Lowercase becomes uppercase and vice versa):
+  
+  ```python
+  a = "HeLLo WoRLD"
+  result = a.swapcase()  # "hEllO wOrld"
+  ```
+
+ 4. String Searching and Checking
+
+- Check if a Substring Exists:
+  
+  ```python
+  a = "Hello world"
+  exists = "world" in a  # True
+  ```
+
+- Find the Index of a Substring:
+  
+  ```python
+  a = "Hello world"
+  index = a.find("world")  # 6
+  ```
+
+- Check if String Starts/Ends with a Substring:
+  
+  ```python
+  starts = a.startswith("Hello")  # True
+  ends = a.endswith("world")      # True
+  ```
+
+ 5. Splitting and Joining Strings
+
+- Split a String into a List (based on a delimiter):
+  
+  ```python
+  a = "one, two, three"
+  words = a.split(", ")  # ['one', 'two', 'three']
+  ```
+
+- Join a List of Strings into a Single String:
+  
+  ```python
+  words = ["one", "two", "three"]
+  sentence = ", ".join(words)  # "one, two, three"
+  ```
+
+ 6. Replacing Substrings
+
+- Replace All Occurrences of a Substring:
+  
+  ```python
+  a = "Hello world"
+  result = a.replace("world", "there")  # "Hello there"
+  ```
+
+ 7. Trimming Whitespace
+
+- Remove Leading and Trailing Spaces:
+  
+  ```python
+  a = "   Hello world   "
+  result = a.strip()  # "Hello world"
+  ```
+
+- Remove Leading Spaces Only:
+  
+  ```python
+  result = a.lstrip()  # "Hello world   "
+  ```
+
+- Remove Trailing Spaces Only:
+  
+  ```python
+  result = a.rstrip()  # "   Hello world"
+  ```
+
+### 8. Checking String Properties
+
+- Check if String Contains Only Digits:
+  
+  ```python
+  a = "12345"
+  is_digit = a.isdigit()  # True
+  ```
+
+- Check if String Contains Only Alphabetic Characters:
+  
+  ```python
+  a = "Hello"
+  is_alpha = a.isalpha()  # True
+  ```
+
+- Check if String Contains Alphanumeric Characters:
+  
+  ```python
+  a = "Hello123"
+  is_alnum = a.isalnum()  # True
+  ```
+
+- Check if String is Uppercase or Lowercase:
+  
+  ```python
+  a = "HELLO"
+  is_upper = a.isupper()  # True
+  
+  b = "hello"
+  is_lower = b.islower()  # True
+  ```
+
+
+10. Reversing a String
+
+- Using Slicing:
+  
+  ```python
+  a = "Hello"
+  result = a[::-1]  # "olleH"
+  ```
+
+11. Counting Substrings
+
+- Count Occurrences of a Substring:
+  
+  ```python
+  a = "banana"
+  count = a.count("a")  # 3
+  ```
+
+12. Escaping Characters
+
+- Escape Special Characters:
+  
+  ```python
+  a = "He said, \"Hello!\""
+  print(a)  # He said, "Hello!"
+  ```
+
+13. String Comparison
+
+- Compare Strings Alphabetically:
+  
+  ```python
+  a = "apple"
+  b = "banana"
+  result = a < b  # True (since "apple" comes before "banana")
+  ```
+
+Summary:
+These common string manipulation methods are widely used in Python programming for everything from data cleaning to formatting output. Python strings are immutable, which means that every time you modify a string, a new one is created, so operations like `replace`, `upper`, or `strip` return new strings rather than modifying the original string.
 
 ## Graphs
 
