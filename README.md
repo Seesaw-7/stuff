@@ -29,7 +29,6 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. 隔�
 
   [Moore’s Voting Algorithm: A Powerful Technique for Majority Element Detection in O(1) space/ O(n) time complexity](https://medium.com/@surajbahuguna1/moores-voting-algorithm-a-powerful-technique-for-majority-element-detection-in-o-1-space-o-n-7480e45f881)
 
-
 ### 189 Rotate Array
 
 - think of reversing the array
