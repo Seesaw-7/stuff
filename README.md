@@ -6,6 +6,9 @@ problems that I did not provide solutions with minimum time complexity
 problems that I was slow to pass
 12 58 80 121
 
+need to code w/o built-in funcs
+14
+
 ## Array/String
 
 ### 80 Remove Duplicates from Sorted Array II
@@ -61,6 +64,16 @@ This is very useful in scenarios where an element depends on both of its neighbo
 ### 14. Longest Common Prefix
 
 - For the same task in each scan, considering using divide and conquor to reduce time complexity, better than linear scan
+
+### 6. Zigzag Conversion
+
+Sometimes we need to extract necessary info, leaving out unnecessary info from the problem description
+
+Instead of constructing an explicit matrix, you can:
+
+Track the current row.
+Append characters directly to the appropriate row.
+After processing all characters, concatenate the rows.
 
 ## Graphs
 
