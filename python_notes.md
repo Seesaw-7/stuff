@@ -497,6 +497,12 @@ These common string manipulation methods are widely used in Python programming f
         return " ".join(list_words)
     ```
 
+### 6 Zigzag Conversion
+
+- Using string concatenation character by character in Python is generally inefficient because Python strings are immutable, meaning that every time you concatenate, a new string object is created.
+
+- list comprehension with `for` and `if`: `possible = [x for x in possible if x+i < len_haystack and haystack[x+i] == needle[i]]`
+
 ## Graphs
 
 ### 45 Jump Game II
