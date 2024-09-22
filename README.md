@@ -78,6 +78,10 @@ Track the current row.
 Append characters directly to the appropriate row.
 After processing all characters, concatenate the rows.
 
+### 28 Find the Index of the First Occurance in a String
+
+do candidate elimination, if sliding window is costly
+
 ## Graphs
 
 ### 45 Jump Game II
