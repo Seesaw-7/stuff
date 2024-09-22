@@ -1,13 +1,13 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-45 189 274
+14 45 189 274 11
 
 problems that I did the min time complexity but still not optimal
 6
 
 problems that I was slow to pass
-12 58 80 121
+12 58 80 121 
 
 need to code w/o built-in funcs
 14
@@ -21,10 +21,9 @@ Compare nums[i] with nums[k-2], where k signals the current valid sequence. éš”ç
 ### 169 Majority Element
 
 - Think about sorting the array `nums.sort()`
-
 - Moore's Voting Algo:
   The algorithm works on the basis of the assumption that the majority element occurs more than n/2 times in the array.
-  
+
   to identify and eliminate pairs of elements from the array that are different.
 
   The algorithm will ensure that the count remains positive for the majority element throughout the traversal, guaranteeing that it will be selected as the final candidate.
@@ -64,11 +63,11 @@ This is very useful in scenarios where an element depends on both of its neighbo
 - I used two-pass and DP
 - use stack and finishing up little by little
 
-### 14. Longest Common Prefix
+### 14 Longest Common Prefix
 
 - For the same task in each scan, considering using divide and conquor to reduce time complexity, better than linear scan
 
-### 6. Zigzag Conversion
+### 6 Zigzag Conversion
 
 Sometimes we need to extract necessary info, leaving out unnecessary info from the problem description
 
@@ -81,6 +80,14 @@ After processing all characters, concatenate the rows.
 ### 28 Find the Index of the First Occurance in a String
 
 do candidate elimination, if sliding window is costly
+
+### 11 Container with Most Water
+
+obvious O(N^2) solutio with two different indices might have a greedy O(N) solution
+
+The widest container (using first and last line) is a good candidate, because of its width. Its water level is the height of the smaller one of first and last line.
+All other containers are less wide and thus would need a higher water level in order to hold more water.
+The smaller one of first and last line doesn't support a higher water level and can thus be safely removed from further consideration.
 
 ## Graphs
 
