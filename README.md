@@ -92,6 +92,10 @@ The widest container (using first and last line) is a good candidate, because of
 All other containers are less wide and thus would need a higher water level in order to hold more water.
 The smaller one of first and last line doesn't support a higher water level and can thus be safely removed from further consideration.
 
+### 209 Minimum Size Subarray Sum
+
+A sliding window with a continuously shrinking size, effectively two pointers but both moving in the same direction
+
 ## Graphs
 
 ### 45 Jump Game II

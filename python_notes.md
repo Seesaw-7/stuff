@@ -503,6 +503,10 @@ These common string manipulation methods are widely used in Python programming f
 
 - list comprehension with `for` and `if`: `possible = [x for x in possible if x+i < len_haystack and haystack[x+i] == needle[i]]`
 
+### Minimum Size Subarray Sum
+
+- In the Dictionary, the key must be unique and immutable. This means that a Python Tuple can be a key whereas a Python List can not. 
+
 ## Graphs
 
 ### 45 Jump Game II
