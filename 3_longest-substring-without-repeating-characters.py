@@ -47,6 +47,22 @@ class Solution:
             temp.append(letter)
             max_len = max(max_len, len(temp))
         return max_len 
+    
+
+    # coded in Sep 2024
+    # O(N*window_size) sliding window, beating 96%
+    # cuz O(window_size) list elt loopup
+    def lengthOfLongestSubstring_2024(self, s: str) -> int:
+        max_size = 0
+        l = 0
+
+        for r in range(len(s)):
+            if s[r] not in s[l:r]:
+                max_size = max(max_size, r-l+1)
+            else:
+                l = s[l:r].index(s[r]) + l + 1
+
+        return max_size
 
     # The efficiency could be significantly improved by using a hash table to store the indices of characters. 
     # Use dictionary for quicker lookup, instead of list

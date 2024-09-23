@@ -96,6 +96,15 @@ The smaller one of first and last line doesn't support a higher water level and 
 
 A sliding window with a continuously shrinking size, effectively two pointers but both moving in the same direction
 
+### 3 Longest Substring without Repeating characters
+
+- For a sliding window with a flexible size, better write in left and right pointers
+
+  one effective way is that we can iterate the right pointer over the whole array,
+  updating the left pointer inside each loop according to different conditions
+
+- To avoid O(window_size) list elt lookup, we can simply use a dict to store the position of each elt in the list
+
 ## Graphs
 
 ### 45 Jump Game II
