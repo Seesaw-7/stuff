@@ -503,9 +503,62 @@ These common string manipulation methods are widely used in Python programming f
 
 - list comprehension with `for` and `if`: `possible = [x for x in possible if x+i < len_haystack and haystack[x+i] == needle[i]]`
 
-### Minimum Size Subarray Sum
+## Sliding Window
+
+### 209 Minimum Size Subarray Sum
 
 - In the Dictionary, the key must be unique and immutable. This means that a Python Tuple can be a key whereas a Python List can not. 
+
+### 30 Substring with Concatenation of All Words
+
+- `Counter`
+  ```py
+  from collections import Counter
+  cnt = Counter([1, 2, 2, 3])
+  ```
+  if writing `cnt2 = cnt1`, since a Counter object is immutable, `cnt2` and `cnt1` will refer to the same object. Thus, changing one will change the other. So, need to copy them.
+  To create a shallow copy, `cnt2 = cnt1.copy()`
+
+  Methods of `Counter`:
+
+   - `elements()`: Returns an iterator over elements, repeating each as many times as its count.
+     ```python
+     counter = Counter([1, 2, 2, 3])
+     print(list(counter.elements()))  # Output: [1, 2, 2, 3]
+     ```
+
+   - `most_common([n])`: Returns the `n` most common elements and their counts from the most common to the least.
+     ```python
+     counter = Counter([1, 2, 2, 3, 3, 3, 4])
+     print(counter.most_common(2))  # Output: [(3, 3), (2, 2)]
+     ```
+
+   - `subtract()`: Subtracts counts, but keeps non-positive counts.
+     ```python
+     counter = Counter([1, 2, 2, 3])
+     counter.subtract([2, 3])
+     print(counter)  # Output: Counter({1: 1, 2: 1, 3: 0})
+     ```
+
+  Arithmetic operations on counters:
+   You can add, subtract, intersect, or union counters.
+
+   ```python
+   c1 = Counter([1, 2, 2, 3])
+   c2 = Counter([2, 3, 3, 4])
+
+   # Addition of counters
+   print(c1 + c2)  # Output: Counter({2: 3, 3: 3, 1: 1, 4: 1})
+
+   # Subtraction of counters
+   print(c1 - c2)  # Output: Counter({1: 1, 2: 1})
+
+   # Intersection (min of counts)
+   print(c1 & c2)  # Output: Counter({2: 1, 3: 1})
+
+   # Union (max of counts)
+   print(c1 | c2)  # Output: Counter({2: 2, 3: 2, 1: 1, 4: 1})
+   ```
 
 ## Graphs
 
@@ -532,3 +585,5 @@ These common string manipulation methods are widely used in Python programming f
   de.pop()
   de.popleft()
   ```
+  Peek front: Use deque[0] to peek at the first element.
+  Peek back: Use deque[-1] to peek at the last element.

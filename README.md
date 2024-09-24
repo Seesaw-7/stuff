@@ -92,6 +92,8 @@ The widest container (using first and last line) is a good candidate, because of
 All other containers are less wide and thus would need a higher water level in order to hold more water.
 The smaller one of first and last line doesn't support a higher water level and can thus be safely removed from further consideration.
 
+## Sliding Window
+
 ### 209 Minimum Size Subarray Sum
 
 A sliding window with a continuously shrinking size, effectively two pointers but both moving in the same direction
@@ -104,6 +106,14 @@ A sliding window with a continuously shrinking size, effectively two pointers bu
   updating the left pointer inside each loop according to different conditions
 
 - To avoid O(window_size) list elt lookup, we can simply use a dict to store the position of each elt in the list
+
+### 30 Substring with Concatenation of All Words
+
+- Brute force might be very helpful to complex questions, while doing a lot of optimization before AC is a bit time consuming
+
+- repeatedly slicing a string is expensive, so we may use pointers when not necessary to slice
+
+- if the size of the sliding window is 3, we only need to scan it in 3 times, starting form the first character, the second and the third respectively
 
 ## Graphs
 
