@@ -888,6 +888,24 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
 
   `return mag - ransom > 0`
 
+### 205 Isomorphic Strings
+
+- when you have a dict, you can directly look it up instead of creating another set for its keys....
+
+- ord() converts a single character into its integer Unicode code point.
+  It works with both ASCII and Unicode characters.
+  The inverse function of ord() is chr(), which takes a Unicode code point (integer) and returns the corresponding character.
+  `print(chr(ord('A') + 1))  # Output: 'B'`
+
+- s is a string, `s.find()` returns the first occurence of a substring (can be multiple chars) in a string. 
+  It returns -1 while not exists, unlike s.index() that raises an error
+
+  ```py
+  s = "hello world"
+  print(s.find("world"))  # Output: 6
+  print(s.find("python")) # Output: -1
+  ```
+
 ## Graphs
 
 ### 45 Jump Game II

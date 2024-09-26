@@ -121,6 +121,15 @@ A sliding window with a continuously shrinking size, effectively two pointers bu
 
 since the type is int, and it only contains 0 or 1, we can use the second to last bit to denote the new state and shift it later
 
+## Hashmap
+
+### 205 Isomorphic Strings
+
+- Check whether two iterables are isomorphic by checking their pairings.
+  `return len(set(zip(s,t))) == len(set(s)) == len(set(t))`
+
+- by checking the first occurence position of every char in s and t are the same
+
 ## Graphs
 
 ### 45 Jump Game II
