@@ -865,6 +865,16 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
   
 - The reason `matrix[:] = zip(*matrix)` works is that Python allows you to assign any iterable (like the iterator returned by `zip()`) to a list slice. Python automatically expands the iterable, iterating over its values, and replaces the contents of matrix with those values.
 
+- `[~i]` is way nicer than `[-1-i]`
+
+- `A[:] = map(list, zip(*A[::-1]))`, `map` accepts one function and one or more iterable
+  
+  `summed = map(lambda x, y: x + y, list1, list2)`
+
+  `result = map(str.upper, ['apple', 'banana', 'cherry'])`
+
+  `map()` returns an iterable, so `result = list(map(function, iterable))`
+  
 ## Graphs
 
 ### 45 Jump Game II

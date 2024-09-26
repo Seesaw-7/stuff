@@ -115,6 +115,13 @@ A sliding window with a continuously shrinking size, effectively two pointers bu
 
 - if the size of the sliding window is 3, we only need to scan it in 3 times, starting form the first character, the second and the third respectively
 
+
+## Matrix
+
+### 289 Game of Life
+
+since the type is int, and it only contains 0 or 1, we can use the second to last bit to denote the new state and shift it later
+
 ## Graphs
 
 ### 45 Jump Game II
