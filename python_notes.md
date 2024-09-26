@@ -667,6 +667,189 @@ These common string manipulation methods are widely used in Python programming f
       l = [board[x][y] for x in range(i, i+3) for y in range(j, j+3)]
   ```
 
+### 54 Spiral Matrix
+
+- pattern matching
+  Pattern matching in Python was introduced in **Python 3.10** as a way to match patterns against values using a `match` statement. It is similar to switch-case statements in other languages but much more powerful. Pattern matching allows for checking the structure and values of objects in a readable and structured way.
+
+  Syntax:
+
+  ```python
+  match value:
+      case pattern1:
+          # Action when value matches pattern1
+      case pattern2:
+          # Action when value matches pattern2
+      case _:
+          # Default case, similar to "else"
+  ```
+
+  Example 1: Simple Pattern Matching (like switch-case)
+  ```python
+  def http_error(status):
+      match status:
+          case 400:
+              return "Bad request"
+          case 404:
+              return "Not found"
+          case 418:
+              return "I'm a teapot"
+          case _:
+              return "Something's wrong"
+
+  print(http_error(404))
+  ```
+
+  Output:
+  ```
+  Not found
+  ```
+
+  Example 2: Matching Complex Data Structures
+
+  You can match against more complex data types, like lists, tuples, or dictionaries, and even decompose them during the match.
+
+  ```python
+  def handle_point(point):
+      match point:
+          case (0, 0):
+              return "Origin"
+          case (x, 0):
+              return f"X-axis at {x}"
+          case (0, y):
+              return f"Y-axis at {y}"
+          case (x, y):
+              return f"Point at ({x}, {y})"
+          case _:
+              return "Not a point"
+
+  print(handle_point((3, 4)))
+  ```
+
+  Output:
+  ```
+  Point at (3, 4)
+  ```
+
+  Example 3: Matching with Guards
+
+  You can add conditional expressions, called **guards**, to your patterns. Guards are useful for adding extra conditions beyond just structural matching.
+
+  ```python
+  def process_number(x):
+      match x:
+          case x if x < 0:
+              return "Negative number"
+          case x if x == 0:
+              return "Zero"
+          case x if x > 0:
+              return "Positive number"
+
+  print(process_number(-5))
+  ```
+
+  Output:
+  ```
+  Negative number
+  ```
+
+  Example 4: Matching Dictionary-like Objects
+
+  Pattern matching can also be used with dictionaries or classes that have attributes.
+
+  ```python
+  def process_order(order):
+      match order:
+          case {"type": "fruit", "name": name, "quantity": quantity}:
+              return f"Fruit order: {quantity}x {name}"
+          case {"type": "vegetable", "name": name}:
+              return f"Vegetable order: {name}"
+          case _:
+              return "Unknown order"
+
+  order = {"type": "fruit", "name": "apple", "quantity": 10}
+  print(process_order(order))
+  ```
+
+  Output:
+  ```
+  Fruit order: 10x apple
+  ```
+
+  Example 5: Matching Class Instances
+
+  You can match attributes from a class, using the `case` statement with a constructor pattern:
+
+  ```python
+  class Point:
+      def __init__(self, x, y):
+          self.x = x
+          self.y = y
+
+  def handle_point(point):
+      match point:
+          case Point(0, 0):
+              return "Origin"
+          case Point(x, 0):
+              return f"X-axis at {x}"
+          case Point(0, y):
+              return f"Y-axis at {y}"
+          case Point(x, y):
+              return f"Point at ({x}, {y})"
+          case _:
+              return "Unknown point"
+
+  p = Point(3, 4)
+  print(handle_point(p))
+  ```
+
+  Output:
+  ```
+  Point at (3, 4)
+  ```
+
+  Summary of Pattern Matching:
+  1. Structural Matching: You can match against the structure (e.g., tuples, lists, dictionaries) and decompose them.
+  2. Guards: Add conditions to the patterns.
+  3. Default Case: Use `_` as a wildcard (like `else` or `default`).
+  4. Complex Matching: Match class instances and data classes.
+
+  Pattern matching in Python is very flexible and can be used for tasks that require handling many cases or conditions. Would you like to see a specific example or dive deeper into any use case?
+
+- `[::-1]` is a slicing technique that reverses the order of a sequence (like a list, string, tuple, etc.). 
+  `start:end:step`: This is the general format of slicing.
+  ```py
+  lst = [1, 2, 3, 4, 5]
+  reversed_lst = lst[::-1]
+  ```
+- Use [::-1] when you need a reversed copy of a list and don't care about memory overhead.
+  Use reversed() when you need to iterate over a sequence in reverse without creating a new list, or if you're dealing with very large data where memory efficiency matters.
+
+- `and` operator: the `and` operator returns the first falsy value or the last value if all are truthy.
+  ```py
+  print([])               # output []
+  print([] and 1)         # output []
+  print([] and [1])       # output []
+  print([2] and [1])      # output [1]
+  ```
+
+- `or` operator: If the first operand is truthy (i.e., evaluates to True), it returns that operand immediately.
+  If the first operand is falsy (i.e., evaluates to False), it returns the second operand.
+  ```py
+  print(0 or 2)       # output 2
+  print(0 < 1 or 3)   # output True
+  print([] or {})     # output {}
+  ```
+
+- `spiral(self, matrix)`, but when calling `self.spiral(matrix)`, self is automatically included as the first argument, no need to pass it.
+
+- using `[*matrix.pop(0)]` instead of `matrix.pop(0)` because zip(*matrix) will create tuples and matrix.pop(0) will thus be a tuple
+
+- using [*matrix.pop(0)] instead of list(matrix.pop(0)) may be more pythonic?
+  ```py
+  def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
+      return matrix and list(matrix.pop(0)) + self.spiralOrder(matrix=[*zip(*matrix)][::-1])
+  ```
 
 ## Graphs
 

@@ -1,5 +1,5 @@
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
         return (self.is_valid_row(board)
                 and self.is_valid_col(board)
                 and self.is_valid_grid(board))
@@ -20,8 +20,8 @@ class Solution:
         # cnts = [{}] * 9 which will create 9 mutable dicts, which will always be the same
         # despite that we only one to change one of them
         cnts = [{} for _ in range(9)]
-        for i,line in enumerate(board):
-            for j,num in enumerate(line):
+        for line in board:
+            for j, num in enumerate(line):
                 if num != ".":
                     if num in cnts[j]:
                         return False
@@ -63,7 +63,7 @@ class Solution:
 
     # better python coding style
     @staticmethod
-    def is_valid_unit(l: List[str]):
+    def is_valid_unit(l: list[str]):
         l = [x for x in l if x != "."]
         return len(l) == len(set(l))
 
