@@ -7,7 +7,7 @@ class Solution:
         word_set = set(words)
         valid = deque()
         cnt = Counter(words)
-        not_appeared = Counter(words)
+        not_appeared = cnt.copy()
         i = 0
         ans = []
 
@@ -26,7 +26,7 @@ class Solution:
                         valid.append(curr)
                     i += win_size
                 else:
-                    not_appeared = Counter(words)
+                    not_appeared = cnt.copy()
                     valid = deque()
                     i += 1
                 if len(valid) == num_words:
@@ -34,7 +34,7 @@ class Solution:
                     not_appeared[item] += 1
                     ans.append(i - num_words * win_size)
             s = s[1:]
-        return ans                   
+        return ans               
 
 
     # 受不了了，我要开始brute force

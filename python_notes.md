@@ -560,6 +560,114 @@ These common string manipulation methods are widely used in Python programming f
    print(c1 | c2)  # Output: Counter({2: 2, 3: 2, 1: 1, 4: 1})
    ```
 
+## Matrix
+
+### 36 Valid Sudoku
+
+- Do not use `cnts = [{}] * 9`
+  which will create 9 mutable dicts, which will always be the same
+  despite that we only one to change one of them
+  use `cnts = [{} for _ in range(9)]` instead
+
+- range judgement can be directly written in one condition: `2 < j <= 5`
+
+- use `self.method()` for methods inside the class, when return, use `return (a and b)`
+  ```py
+        return (self.is_valid_row(board)
+                and self.is_valid_col(board)
+                and self.is_valid_grid(board))
+  ```
+
+- The zip() function in Python is used to combine two or more iterables (like lists, tuples, or strings) into an iterator of tuples, where each tuple contains elements from each iterable at the same index. The resulting object from zip() is a zip object, which is an iterator. You can convert it into a list or iterate over it directly.
+
+- regroup matrix columns from rows: `zip(*board)` `list(zip(*board))`
+
+- unpacking arguments
+  In Python, `*var` and `**var` are used for unpacking arguments in function calls or definitions. Let's break them down:
+
+  1. `*var` (Unpacking Positional Arguments)
+
+  When used in function definitions, `*var` collects all the positional arguments passed to the function into a tuple. When used in function calls, it unpacks an iterable (like a list or tuple) into individual positional arguments.
+
+  Example in function definition:
+  ```python
+  def example_func(*args):
+      print(args)
+
+  example_func(1, 2, 3)
+  ```
+  Output:
+  ```
+  (1, 2, 3)
+  ```
+  Here, `args` is a tuple containing all the positional arguments passed to the function.
+
+  Example in function call:
+  ```python
+  numbers = [1, 2, 3]
+  print(*numbers)
+  ```
+  Output:
+  ```
+  1 2 3
+  ```
+  Here, `*numbers` unpacks the list into individual elements.
+
+  1. `**var` (Unpacking Keyword Arguments)
+
+  When used in function definitions, `**var` collects all the keyword arguments passed to the function into a dictionary. When used in function calls, it unpacks a dictionary into keyword arguments.
+
+  Example in function definition:
+  ```python
+  def example_func(**kwargs):
+      print(kwargs)
+
+  example_func(a=1, b=2, c=3)
+  ```
+  Output:
+  ```
+  {'a': 1, 'b': 2, 'c': 3}
+  ```
+  Here, `kwargs` is a dictionary containing all the keyword arguments passed to the function.
+
+  Example in function call:
+  ```python
+  data = {'a': 1, 'b': 2, 'c': 3}
+  example_func(**data)
+  ```
+  This unpacks the dictionary `data` into keyword arguments: `a=1`, `b=2`, `c=3`.
+
+  Using `*` and `**` Together:
+  You can use both `*` and `**` in the same function definition to handle both positional and keyword arguments:
+
+  ```python
+  def example_func(*args, **kwargs):
+      print("Positional:", args)
+      print("Keyword:", kwargs)
+
+  example_func(1, 2, a=3, b=4)
+  ```
+  Output:
+  ```
+  Positional: (1, 2)
+  Keyword: {'a': 3, 'b': 4}
+  ```
+
+  Summary:
+  - `*var` handles multiple positional arguments or unpacks an iterable into individual arguments.
+  - `**var` handles multiple keyword arguments or unpacks a dictionary into keyword arguments.
+
+- determine whether list elts are unique: `len(l) == len(set(l))`
+
+- list comprehension with two for loops: `l = [board[x][y] for x in range(i, i+3) for y in range(j, j+3)]`
+
+- for loop with an explicit iterable, grouping elements:
+  ```py
+  for j in [0, 3, 6]:
+      l = [board[x][y] for x in range(i, i+3) for y in range(j, j+3)]
+  ```
+
+
 ## Graphs
 
 ### 45 Jump Game II
