@@ -874,7 +874,20 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
   `result = map(str.upper, ['apple', 'banana', 'cherry'])`
 
   `map()` returns an iterable, so `result = list(map(function, iterable))`
-  
+
+## Hashmap
+
+### 383 Ransom Note
+
+- revisit numerical operators for Counters (not applicable for dicts)
+  ```py
+          mag = Counter(magazine)
+          ransom = Counter(ransomNote)
+          return mag >= ransom
+  ```
+
+  `return mag - ransom > 0`
+
 ## Graphs
 
 ### 45 Jump Game II
