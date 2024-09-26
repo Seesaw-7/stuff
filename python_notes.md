@@ -851,6 +851,20 @@ These common string manipulation methods are widely used in Python programming f
       return matrix and list(matrix.pop(0)) + self.spiralOrder(matrix=[*zip(*matrix)][::-1])
   ```
 
+### 48 Rotate Image
+
+- `matrix[:] = [list(x)[::-1] for x in zip(*matrix)]`  the slice notation [:] means "take all elements of the list (or other sequence) from the start to the end."
+  Often used when you want to create a shallow copy of a list without modifying the original list, but don't need a deep copy.
+Preserving Immutability: If you want to pass a copy of a list into a function and ensure the original list remains unchanged, but you don't need to duplicate nested structures. matrix.copy() does the same thing as matrix[:], creating a shallow copy.
+
+- list slices can be directly assigned to
+  
+- `copy.deepcopy()`
+
+- `matrix = [[7,4,1],[8,5,2],[9,6,3]]` This is not in-place
+  
+- The reason `matrix[:] = zip(*matrix)` works is that Python allows you to assign any iterable (like the iterator returned by `zip()`) to a list slice. Python automatically expands the iterable, iterating over its values, and replaces the contents of matrix with those values.
+
 ## Graphs
 
 ### 45 Jump Game II

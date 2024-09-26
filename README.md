@@ -12,7 +12,7 @@ problems that I was slow to pass
 need to code w/o built-in funcs
 14
 
-need to reconsider 
+need to reconsider
 15(after 2 sum) 45
 
 ## Array/String
