@@ -6,7 +6,8 @@
   
     ```py
     from collections import defaultdict
-    d = defaultdict(int)
+    d = defaultdict(int) # the input should be one datatype
+    d1 = defaultdict(list) # [] by default
     ```
 
 ### 189 Rotate Array

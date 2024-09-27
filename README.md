@@ -131,6 +131,12 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 - by checking the first occurence position of every char in s and t are the same
   `return list(map(s.find, s)) == list(map(t.find, t))`
 
+### 49 Group Anagrams
+
+- we can use dict for grouping, where the key is their shared feature, and the value is the list of elts with this feature
+
+- the dict key should be immutable, so we cannot use a Counter object as the key, but we can use the sorted string for the anagrams
+
 ## Graphs
 
 ### 45 Jump Game II
