@@ -907,6 +907,10 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
   print(s.find("python")) # Output: -1
   ```
 
+### 49 Group Anagrams
+
+- `"".join(sorted(w))` w is a string
+
 ## Graphs
 
 ### 45 Jump Game II

@@ -137,6 +137,10 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 
 - the dict key should be immutable, so we cannot use a Counter object as the key, but we can use the sorted string for the anagrams
 
+### 1 Two Sum
+
+- use one pass hashtable. Record the num-position pair in the hashtable. if target-num in hashtable, then return their positions
+
 ## Graphs
 
 ### 45 Jump Game II
