@@ -141,6 +141,10 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 
 - use one pass hashtable. Record the num-position pair in the hashtable. if target-num in hashtable, then return their positions
 
+### 202 Happy Number
+
+- convert int to str to manipulate each digit in parallel `n = sum([int(x) ** 2 for x in str(n)])`
+
 ## Graphs
 
 ### 45 Jump Game II
