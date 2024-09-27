@@ -1,7 +1,7 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11
+14 45 189 274 11 49
 
 problems that I did the min time complexity but still not optimal
 6
@@ -129,6 +129,7 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
   `return len(set(zip(s,t))) == len(set(s)) == len(set(t))`
 
 - by checking the first occurence position of every char in s and t are the same
+  `return list(map(s.find, s)) == list(map(t.find, t))`
 
 ## Graphs
 
