@@ -172,6 +172,11 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
       return ans
   ```
 
+### 57 Insert Interval
+
+- When dealing with intervals, draw all possible conditions
+- keep the logic as simple as possible
+
 ## Graphs
 
 ### 45 Jump Game II
