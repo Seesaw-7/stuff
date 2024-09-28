@@ -15,6 +15,10 @@ need to code w/o built-in funcs
 need to reconsider
 15(after 2 sum) 45
 
+problems with other solutions
+
+42 202
+
 ## Array/String
 
 ### 80 Remove Duplicates from Sorted Array II
@@ -145,6 +149,8 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 
 - convert int to str to manipulate each digit in parallel `n = sum([int(x) ** 2 for x in str(n)])`
 
+- can be solved with fast and slow pionter
+
 ## Intervals
 
 ### 56 Merge Intervals
@@ -158,6 +164,7 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 - you can revise the answer in the answer list XD
   
 - you can put edge case judegment inside conditions of a loop
+  
   ```py
   def merge(self, intervals: List[List[int]]) -> List[List[int]]:
       intervals.sort()
@@ -187,9 +194,43 @@ because they can potentially accomodate more non-overlapping intervals
 
 always greedily shooting where most intervals overlap is not globally optimal
 
+## Stack
+
+### Valid Parenthesis
+
+Use stack for parsing strings that will open and close
+
+### Simplify Path
+
+- When you need to retrieve and pop the previous one, consider using stack
+  
+- When speraters exists, consider push and pop word to and from stack, instead of single characters
+  
+- When seperators exists, try splitting by seperaters and join them by seperaters later
+
 ## Graphs
 
 ### 45 Jump Game II
 
 [BFS vs DFS](https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/)
 Greedy BFS
+
+## Dynamic Programming
+
+- DP vs Divide & Conquer
+  
+  While both approaches involve breaking a problem into smaller subproblems, dynamic programming focuses on solving overlapping subproblems efficiently by storing intermediate results. In contrast, divide and conquer assumes that subproblems are independent and does not reuse the solutions to the subproblems.
+
+  In short, dynamic programming can be thought of as a more specialized version of divide and conquer that optimizes by storing and reusing solutions to overlapping subproblems.
+
+- DP vs Greedy
+  
+  Greedy algorithms do not guarantee that a locally optimal solution will lead to a globally optimal solution unless the problem has the greedy choice property (i.e., a globally optimal solution can be obtained by making locally optimal choices).
+
+  DP solves each subproblem and stores the result, ensuring that it finds the optimal solution for each subproblem and combines these solutions. It revisits subproblems and reuses solutions from earlier steps to make a globally optimal decision. DP considers all possible decisions at each step and chooses the best one based on prior calculations.
+  DP doesn't rely on just one greedy choice. Instead, it examines multiple possibilities and combines results of overlapping subproblems, ensuring that the optimal decision is made globally, not just locally.
+
+  Consider the 0/1 Knapsack problem:
+
+  A greedy algorithm might pick the item with the highest value-to-weight ratio, but this does not always lead to the best solution (e.g., choosing smaller items with slightly lower ratios could give a better total value).
+  Dynamic programming considers all subsets of items and ensures the optimal combination by storing and using intermediate results.
