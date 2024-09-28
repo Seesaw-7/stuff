@@ -911,6 +911,16 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
 
 - `"".join(sorted(w))` w is a string
 
+## Intervals
+
+### 56 Merge Intervals
+
+- sort a list based on the first element (actually python automatically sort based on the first element)
+  ```py
+  >>> t = [['D', 'F', 'E', 'D', 'F', 'D'], ['A', 'F', 'E', 'C', 'F', 'E'], ['C', 'E', 'E', 'F', 'E', 'E'], ['B', 'F', 'E', 'D', 'F', 'F']]
+  >>> t.sort(key=lambda x: x[0]) 
+  ```
+
 ## Graphs
 
 ### 45 Jump Game II

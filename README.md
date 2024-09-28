@@ -7,7 +7,7 @@ problems that I did the min time complexity but still not optimal
 6
 
 problems that I was slow to pass
-12 58 80 121 15 128
+12 58 80 121 15 128 56
 
 need to code w/o built-in funcs
 14
@@ -144,6 +144,33 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 ### 202 Happy Number
 
 - convert int to str to manipulate each digit in parallel `n = sum([int(x) ** 2 for x in str(n)])`
+
+## Intervals
+
+### 56 Merge Intervals
+
+- When you need to compare two neighbouring elts in a list, always compare this one to the previous one, instead of comparing the currant one to the future one
+
+- be very careful with flags (states), do not use them when not necessary
+
+- do not initialize too many variables, like `temp`. Initialize them only when necessary. This would be very redundant and time consuming
+  
+- you can revise the answer in the answer list XD
+  
+- you can put edge case judegment inside conditions of a loop
+  ```py
+  def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+      intervals.sort()
+      ans = []
+
+      for ran in intervals:
+          if not ans or ans[-1][1] < ran[0]:
+              ans.append(ran)
+          else:
+              ans[-1][1] = max(ans[-1][1], ran[1])
+
+      return ans
+  ```
 
 ## Graphs
 
