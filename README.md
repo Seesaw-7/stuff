@@ -208,6 +208,10 @@ Use stack for parsing strings that will open and close
   
 - When seperators exists, try splitting by seperaters and join them by seperaters later
 
+## Min Stack
+
+get_min() does not mean that you need to pop an element.. just peeking..
+
 ## Graphs
 
 ### 45 Jump Game II

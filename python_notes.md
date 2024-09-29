@@ -921,6 +921,12 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
   >>> t.sort(key=lambda x: x[0]) 
   ```
 
+## Stack
+
+### 155 Min Stack
+
+- Initialize an int without value: `a = None`
+
 ## Graphs
 
 ### 45 Jump Game II
