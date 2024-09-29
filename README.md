@@ -7,7 +7,7 @@ problems that I did the min time complexity but still not optimal
 6
 
 problems that I was slow to pass
-12 58 80 121 15 128 56
+12 58 80 121 15 128 56 224
 
 need to code w/o built-in funcs
 14
@@ -196,11 +196,11 @@ always greedily shooting where most intervals overlap is not globally optimal
 
 ## Stack
 
-### Valid Parenthesis
+### 20 Valid Parenthesis
 
 Use stack for parsing strings that will open and close
 
-### Simplify Path
+### 71 Simplify Path
 
 - When you need to retrieve and pop the previous one, consider using stack
   
@@ -208,9 +208,15 @@ Use stack for parsing strings that will open and close
   
 - When seperators exists, try splitting by seperaters and join them by seperaters later
 
-## Min Stack
+## 155 Min Stack
 
 get_min() does not mean that you need to pop an element.. just peeking..
+
+## 224 Basic Calculator
+
+you may not necessarily need to use stack all the way long
+use it when you have to (eg. only for parts inside ())
+
 
 ## Graphs
 
