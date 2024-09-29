@@ -418,7 +418,7 @@ Python provides a wide range of string manipulation methods that are very useful
 
 8. Checking String Properties
 
-- Check if String Contains Only Digits:
+- Check if String Contains Only Digits (negative integers won't work):
   
   ```python
   a = "12345"
@@ -926,6 +926,23 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
 ### 155 Min Stack
 
 - Initialize an int without value: `a = None`
+
+### Evaluate Reverse Polish Notation
+
+- python ints are 32 bits
+
+- to check if a string is a number(including negative numbers), you can only do with trying converting to int/float and catch
+  
+  ```py
+  def is_number(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+  ``` 
+
+- use `int(a / b)` to truncate the result of a division, which effectively removes the decimal part and rounds the result towards zero. Alternatively, use `math.trunc(num)`
 
 ## Graphs
 
