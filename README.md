@@ -223,6 +223,10 @@ use it when you have to (eg. only for parts inside ())
 
 - To find cycle, either using hashtable or using slow & fast pointers
 
+### 21 Merge Two Sorted Lists
+
+- initialize with the desired node, but only return node.next
+
 ## Graphs
 
 ### 45 Jump Game II
