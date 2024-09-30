@@ -217,6 +217,11 @@ get_min() does not mean that you need to pop an element.. just peeking..
 you may not necessarily need to use stack all the way long
 use it when you have to (eg. only for parts inside ())
 
+## Linked List
+
+### 141 Linked List Cycle
+
+- To find cycle, either using hashtable or using slow & fast pointers
 
 ## Graphs
 

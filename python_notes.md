@@ -944,6 +944,75 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
 
 - use `int(a / b)` to truncate the result of a division, which effectively removes the decimal part and rounds the result towards zero. Alternatively, use `math.trunc(num)`
 
+## Linked List
+
+```py
+class Node:
+    def __init__(self, data=None):
+        self.data = data  # The value stored in the node
+        self.next = None  # Reference to the next node
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None  # Initially, the list is empty
+
+    # Method to add a new node at the end of the list
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+
+    # Method to print all the nodes in the list
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+    # Method to add a new node at the beginning of the list
+    def prepend(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    # Method to remove a node by value
+    def remove(self, key):
+        current = self.head
+
+        # If the list is empty
+        if current is None:
+            print("List is empty")
+            return
+
+        # If the head is the node to be deleted
+        if current.data == key:
+            self.head = current.next
+            current = None
+            return
+
+        # Traverse the list to find the node to delete
+        prev = None
+        while current and current.data != key:
+            prev = current
+            current = current.next
+
+        # If the node wasn't found
+        if current is None:
+            print(f"Node with value {key} not found.")
+            return
+
+        # Unlink the node from the linked list
+        prev.next = current.next
+        current = None
+```
+
 ## Graphs
 
 ### 45 Jump Game II
