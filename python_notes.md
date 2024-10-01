@@ -153,7 +153,7 @@
   > Although scopes are determined statically, they are used dynamically. At any time during execution, there are 3 or 4 nested scopes whose namespaces are directly accessible:
   > - the innermost scope, which is searched first, contains the local names
   >- the scopes of any enclosing functions, which are searched starting with the nearest enclosing scope, contain non-local, but also non-global names
-  >- the next-to-last scope contains the current module’s global names **`global` means module-level binding**
+  >- the next-to-last scope contains the current module’s global names `global` means module-level binding**
   >- the outermost scope (searched last) is the namespace containing built-in names
 
   > 
@@ -927,7 +927,7 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
 
 - Initialize an int without value: `a = None`
 
-### Evaluate Reverse Polish Notation
+### 150 Evaluate Reverse Polish Notation
 
 - python ints are 32 bits
 
@@ -943,6 +943,121 @@ Preserving Immutability: If you want to pass a copy of a list into a function an
   ``` 
 
 - use `int(a / b)` to truncate the result of a division, which effectively removes the decimal part and rounds the result towards zero. Alternatively, use `math.trunc(num)`
+
+### 224 Basic Calculator
+
+- check whether an object is an instance of a class: `isinstance(tokens[i], int)`
+  for example, check whether something is an int
+
+- In Python, int is a class.
+
+  In Python, almost everything is an object, and every object is an instance of some class. The int type, which represents integer numbers, is actually a class that is built into Python.
+
+  You can confirm this with the type() function:
+
+  ```python
+  x = 5
+  print(type(x))  # Output: <class 'int'>
+  ```
+
+  In this example, x is an integer, and its type is `<class 'int'>`. So, int is indeed a class in Python, just like user-defined classes.
+
+- user-defined classes themselves (the class object) versus instances of user-defined classes (objects created from the class).
+
+  Here's why instances of user-defined classes can be used as dictionary keys, but the class object itself generally should not:
+
+  1. User-defined class objects (the class itself)
+  A class object (e.g., MyClass) refers to the class definition, not any specific instance of it. By default, class objects do not have the properties required to be used as dictionary keys in the same way that instances do, mainly because:
+
+  Class objects are mutable: The class itself can change dynamically at runtime. For example, you can add new methods or attributes to a class after its creation, which would change its state and affect its hash. Since the class is mutable in this sense, it does not make a reliable dictionary key unless the __hash__ and __eq__ methods are specifically implemented to account for such changes.
+
+  Hashing behavior may not be defined: The default __hash__ and __eq__ methods of the class object may not behave as you'd expect for dictionary key usage. The class itself doesn’t have a unique, stable identity like instances do, so it’s more ambiguous.
+
+  2. Instances of user-defined classes (objects created from the class)
+  By contrast, instances of user-defined classes are perfectly suited to be used as dictionary keys, because:
+
+  Instances have a default hash: When you create an instance of a user-defined class, Python provides it with a default __hash__ method that is based on the memory address of the instance. This ensures that each instance is unique and can be hashed, even if the class is mutable.
+
+  Instances have a unique identity: Each instance is distinct and has its own identity, even if multiple instances are created with the same attributes. This uniqueness makes it suitable for use as a key, as dictionary keys require uniqueness.
+
+  Mutability of the class doesn’t affect the instance: Even though you can change the class at runtime (add methods, modify attributes, etc.), that doesn't affect the instance's hash or equality, because those are tied to the instance's identity (memory address) and not the class definition itself.
+
+
+- The phrase "almost everything is an object" in Python refers to the fact that nearly all entities in Python - whether they are data types, functions, classes, or even modules — are implemented as objects. However, there are a few low-level constructs (e.g., keywords) that are not objects, which is why we say "almost everything" instead of "everything."
+
+  An object in Python is an instance of a class, which means it has attributes (data) and methods (functions) associated with it. Python's object model is highly consistent: most things you interact with (like numbers, strings, functions, etc.) are instances of classes, and hence, objects.
+
+  What Does "Almost Everything is an Object" Include?
+
+  1. Basic Data Types: All data types in Python are implemented as classes, and the values of these types are objects. For example:
+      - Numbers (`int`, `float`, `complex`):
+        ```python
+        x = 10
+        print(type(x))  # <class 'int'>
+        ```
+        Here, `10` is an instance of the `int` class, meaning it is an object.
+
+      - Strings (`str`):
+        ```python
+        s = "Hello"
+        print(type(s))  # <class 'str'>
+        ```
+        `"Hello"` is an object of the `str` class.
+
+       - Booleans (`bool`):
+         ```python
+         b = True
+         print(type(b))  # <class 'bool'>
+         ```
+         `True` is an instance of the `bool` class.
+
+  2. Functions: Functions are also objects in Python. You can pass them as arguments, return them from other functions, and assign them to variables.
+    ```python
+    def my_function():
+        return "Hello"
+
+    print(type(my_function))  # <class 'function'>
+    ```
+
+  3. Classes: Classes themselves are objects, created by Python's metaclass system (like `type`).
+       ```python
+       class MyClass:
+           pass
+
+       print(type(MyClass))  # <class 'type'>
+       ```
+       `MyClass` is an object of the class `type`, and you can manipulate it as an object.
+
+  4. Modules: Modules that you import (e.g., `math`, `os`, etc.) are objects as well.
+       ```python
+       import math
+       print(type(math))  # <class 'module'>
+       ```
+
+  5. User-Defined Classes and Instances: When you define your own class, it is also an object. Instances of that class are obviously objects too.
+
+   6. Exceptions: Python exceptions are objects, typically instances of classes that inherit from `BaseException`.
+
+   Exceptions (What’s Not an Object)
+
+   There are a few things in Python that are not objects, which is why we say "almost everything" instead of "everything." These include:
+
+   7. Keywords: Python's reserved words (like `if`, `else`, `while`, `for`, `in`, etc.) are not objects. They are part of the Python syntax, used to define control flow and structure in your code.
+       ```python
+       # Keywords like 'if', 'else', 'for' are part of the language syntax, not objects
+       if True:
+           print("This is a keyword example")
+       ```
+
+   8. Operators: Symbols like `+`, `-`, `*`, `/` are not objects. They are part of the Python syntax that gets translated into method calls or bytecode during execution. However, you can overload these operators in classes using special methods (e.g., `__add__`).
+
+   9. Statements: Python statements (like `print`, `return`, `yield`, etc.) are also not objects but rather part of the language syntax.
+
+   Why Is This Important?
+   Because almost everything is an object in Python, you get a very uniform way of interacting with the language. You can:
+   - Pass around functions as arguments (since functions are objects).
+   - Dynamically create classes or manipulate them (since classes are objects).
+   - Use methods and attributes on almost anything, thanks to Python’s object-oriented nature.
 
 ## Linked List
 
@@ -1012,6 +1127,13 @@ class LinkedList:
         prev.next = current.next
         current = None
 ```
+
+### 138 Copy List with Random Pointer
+
+- instances of class can be used as dictionary keys, cuz they are memory addresses.
+
+- `dictionary.get(key, default_value)` default_value (optional): The value to return if the key is not found. If this is not provided, None is returned by default.
+  So, instead of writing `old2new[curr].next = old2new[curr.next] if curr.next != None else None`, write `old2new[curr].next = old2new.get(curr.next)`
 
 ## Graphs
 

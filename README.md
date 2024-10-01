@@ -225,7 +225,13 @@ use it when you have to (eg. only for parts inside ())
 
 ### 21 Merge Two Sorted Lists
 
-- initialize with the desired node, but only return node.next
+- initialize a linked list with Node(), but only return node.next, this would ease initialization of the first node and ease looping
+
+### 138 Copy List with Random Pointer
+
+- interweaving the new linked list with the old linked list, thus keeping the same sequence. Later, leave out the old linked list.
+  
+- use hashtable to take down the mapping from the old nodes to new nodes
 
 ## Graphs
 
