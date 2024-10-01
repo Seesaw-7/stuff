@@ -1160,5 +1160,6 @@ class LinkedList:
   de.pop()
   de.popleft()
   ```
-  Peek front: Use deque[0] to peek at the first element.
-  Peek back: Use deque[-1] to peek at the last element.
+  
+  Peek front: Use `deque[0]` to peek at the first element.
+  Peek back: Use `deque[-1]` to peek at the last element.
