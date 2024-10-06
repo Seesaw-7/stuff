@@ -243,6 +243,18 @@ use it when you have to (eg. only for parts inside ())
 
 - using a single python dict which is ordered according to insertion sequence
 
+## Binary Tree General
+
+### 104 Maximum Depth of Binary Tree
+
+- divide and conquer(recursive DFS)
+  
+- iterative DFS
+
+- BFS
+
+- Preorder, In-order, post-order
+
 ## Graphs
 
 ### 45 Jump Game II
