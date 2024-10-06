@@ -255,6 +255,25 @@ use it when you have to (eg. only for parts inside ())
 
 - Preorder, In-order, post-order
 
+### 100 Same Tree
+
+- coding
+  
+  ```py
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if p and q:
+            a = p.val == q.val
+            b = self.isSameTree(p.left, q.left)
+            c = self.isSameTree(p.right, q.right)
+            return a and b and c
+        else:
+            return not p and not q
+  ```
+
+### 226 Invert Binary Tree
+
+recursive stack space: O(N) space complexity, or possibly O(log N)
+
 ## Graphs
 
 ### 45 Jump Game II
