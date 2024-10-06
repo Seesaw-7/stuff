@@ -1141,6 +1141,8 @@ class LinkedList:
 
 ### 146 LRU Cache
 
+- check whether two variables holds the same address in memory: `a is b`
+
 - Python does not have a built-in linked list, cuz memory management is not a key feature in ahigh level programming language...
 
 - After Python 3.7, the dict become an ordered map, which keeps the insertion order with an auxilary array
