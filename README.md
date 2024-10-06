@@ -274,6 +274,40 @@ use it when you have to (eg. only for parts inside ())
 
 recursive stack space: O(N) space complexity, or possibly O(log N)
 
+### 101 Symmetric Tree
+
+Time complexity of DFS and BFS in Tree: O(N) num nodes
+
+Time complexity of DFS and BFS in Graph: O(V+E) for adjacency list and O(V^2) for adjacency matrix. because of potential loops, one node can be checked multiple times in a graph, checking whether it is visited or not
+
+Space complexity of DFS in tree: O(h) height of the tree
+
+Space complexity of DFS in graph: O(V) stack space and O(V+E) adjancy list space
+
+Space complexity of BFS in tree: O(b) breadth of the tree
+
+Space complexity of BFS in graph: O(V) queue space and O(V+E) adjacency list space
+
+### 105 Construct Binary Tree form Inorder and Preorder Traversal
+
+- use scratch paper for tree building problems
+
+- think about whether to use recursive or iterative beforehand. choose iterative with stack in this case. Think about what should be kept in the stack, in this case the parent nodes that we need to use again later, which are nodes that has a left child but no right child yet. For nodes with right child, we'll never use it again later
+  
+- Another solution is to use recursion. We can build the tree subtree by subtree. The root node is always the first node of preorder, then since the inorder is the sequence of nodes in the tree from left to right, the nodes left to the root node in inorder list belongs to the left subtree, and the nodes right to the root nodes belongs to the right subtree. What's important is that the structure of the preorder list is <root node + all left subtree nodes + all subtree nodes>. In addition, we can modify the preorder list in each iteration, with mutable nature of python list. Since the recursions of left subtrees will all be calulated before the right subtrees.
+  
+  ```py
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        if not inorder:
+            return None
+        val = preorder.pop(0)
+        root = TreeNode(val)
+        idx = inorder.index(val)
+        root.left = self.buildTree(preorder, inorder[:idx])
+        root.right = self.buildTree(preorder, inorder[idx+1:])
+        return root
+  ```
+
 ## Graphs
 
 ### 45 Jump Game II

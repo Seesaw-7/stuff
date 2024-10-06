@@ -1188,6 +1188,22 @@ class LinkedList:
   `a = next(iter(my_dict))`
   `my_dict.pop(a)`
 
+### 105 Construct Binary Tree from Inorder and Preorder Traversal
+
+- take advantage of python's mutable list preorder
+  
+  ```py
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        if not inorder:
+            return None
+        val = preorder.pop(0)
+        root = TreeNode(val)
+        idx = inorder.index(val)
+        root.left = self.buildTree(preorder, inorder[:idx])
+        root.right = self.buildTree(preorder, inorder[idx+1:])
+        return root
+  ```
+
 ## Graphs
 
 ### 45 Jump Game II
