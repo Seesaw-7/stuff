@@ -233,6 +233,16 @@ use it when you have to (eg. only for parts inside ())
   
 - use hashtable to take down the mapping from the old nodes to new nodes
 
+### 146 LRU Cache
+
+- using a doubly linked list and a dict. The dict keeps track of the key and the node addr which stores the key-value pair
+  
+  linked lists support O(1) insertion/deletion in the middle, if you specify the address of the node. Thus, we need to keep the address of each node. Use a linked list if need O(1) insertion/deletion in the middle. Use a DLL if the tail need to be considered.
+
+- using a deque and 2 dicts, one taking the key-value pair, the other taking how many times each key appears in the deque
+
+- using a single python dict which is ordered according to insertion sequence
+
 ## Graphs
 
 ### 45 Jump Game II

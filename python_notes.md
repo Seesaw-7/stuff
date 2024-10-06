@@ -1135,6 +1135,57 @@ class LinkedList:
 - `dictionary.get(key, default_value)` default_value (optional): The value to return if the key is not found. If this is not provided, None is returned by default.
   So, instead of writing `old2new[curr].next = old2new[curr.next] if curr.next != None else None`, write `old2new[curr].next = old2new.get(curr.next)`
 
+### 86 Partition List
+
+- `a = b = 1` is valid
+
+### 146 LRU Cache
+
+- Python does not have a built-in linked list, cuz memory management is not a key feature in ahigh level programming language...
+
+- After Python 3.7, the dict become an ordered map, which keeps the insertion order with an auxilary array
+
+  However, deletion is still O(1) because when an element is deleted, Python doesn’t immediately shrink or re-organize the auxiliary array. Instead, it marks the deleted slot as “dummy” or "tombstone," effectively treating it as an empty space.
+
+- python iterator
+  Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
+
+  All these objects have a iter() method which is used to get an iterator:
+
+  ```py
+  mytuple = ("apple", "banana", "cherry")
+  myit = iter(mytuple)
+
+  print(next(myit))
+  print(next(myit))
+  print(next(myit))
+  ```
+
+  create an iterator
+  ```py
+  class MyNumbers:
+    def __iter__(self):
+      self.a = 1
+      return self
+
+    def __next__(self):
+      x = self.a
+      self.a += 1
+      return x
+
+  myclass = MyNumbers()
+  myiter = iter(myclass)
+
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  ```
+
+  `a = next(iter(my_dict))`
+  `my_dict.pop(a)`
+
 ## Graphs
 
 ### 45 Jump Game II
@@ -1160,6 +1211,6 @@ class LinkedList:
   de.pop()
   de.popleft()
   ```
-  
+
   Peek front: Use `deque[0]` to peek at the first element.
   Peek back: Use `deque[-1]` to peek at the last element.
