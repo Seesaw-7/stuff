@@ -1,23 +1,23 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49 117
+14 45 189 274 11 49
 
 problems that I did the min time complexity but still not optimal
 6 105
 
 problems that I was slow to pass
-12 58 80 121 15 128 56 224 25
+12 58 80 121 15 128 56 224 25 114
 
 need to code w/o built-in funcs
 14
 
 need to reconsider
-15(after 2 sum) 45
+15(after 2 sum) 45 114(I was too tired to look at other solutions)
 
 problems with other solutions
 
-42 202
+42 202 117 114
 
 ## Array/String
 
@@ -313,6 +313,10 @@ Space complexity of BFS in graph: O(V) queue space and O(V+E) adjacency list spa
 Other than BFS which traverse the tree level by level..
 
 Inorder to fit in O(1) space complexity, we can keep on the currant level, and assign left and right child with the next pointer. We iterate with curr = curr.next which was previously assigned, and assign prev node in the next level with our left or right child. I feel dumb.
+
+### 114 Flatten Binary Tree to Linked List
+
+When you are not sure how to recurse for a tree problem, use scratch paper..
 
 ## Graphs
 
