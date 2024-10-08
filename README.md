@@ -1,13 +1,13 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49
+14 45 189 274 11 49 117
 
 problems that I did the min time complexity but still not optimal
-6
+6 105
 
 problems that I was slow to pass
-12 58 80 121 15 128 56 224
+12 58 80 121 15 128 56 224 25
 
 need to code w/o built-in funcs
 14
@@ -307,6 +307,12 @@ Space complexity of BFS in graph: O(V) queue space and O(V+E) adjacency list spa
         root.right = self.buildTree(preorder, inorder[idx+1:])
         return root
   ```
+
+### 117 Populating Next Right Pointers in Each Node II
+
+Other than BFS which traverse the tree level by level..
+
+Inorder to fit in O(1) space complexity, we can keep on the currant level, and assign left and right child with the next pointer. We iterate with curr = curr.next which was previously assigned, and assign prev node in the next level with our left or right child. I feel dumb.
 
 ## Graphs
 
