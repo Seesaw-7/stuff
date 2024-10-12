@@ -208,11 +208,11 @@ Use stack for parsing strings that will open and close
   
 - When seperators exists, try splitting by seperaters and join them by seperaters later
 
-## 155 Min Stack
+### 155 Min Stack
 
 get_min() does not mean that you need to pop an element.. just peeking..
 
-## 224 Basic Calculator
+### 224 Basic Calculator
 
 you may not necessarily need to use stack all the way long
 use it when you have to (eg. only for parts inside ())
@@ -325,7 +325,7 @@ When you are not sure how to recurse for a tree problem, use scratch paper..
 [BFS vs DFS](https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/)
 Greedy BFS
 
-## Dynamic Programming
+## 1D DP
 
 - DP vs Divide & Conquer
   
@@ -344,3 +344,7 @@ Greedy BFS
 
   A greedy algorithm might pick the item with the highest value-to-weight ratio, but this does not always lead to the best solution (e.g., choosing smaller items with slightly lower ratios could give a better total value).
   Dynamic programming considers all subsets of items and ensures the optimal combination by storing and using intermediate results.
+
+### 70 Climbing Stairs
+
+the number of choices to reach the current stair equals to # previous + # second previous
