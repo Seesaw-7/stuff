@@ -348,3 +348,8 @@ Greedy BFS
 ### 70 Climbing Stairs
 
 the number of choices to reach the current stair equals to # previous + # second previous
+
+### 198 House Robber
+
+if the current only depends on the previous and the second previous, no need to store an O(N) array
+

@@ -1232,3 +1232,37 @@ class LinkedList:
 
   Peek front: Use `deque[0]` to peek at the first element.
   Peek back: Use `deque[-1]` to peek at the last element.
+
+## 1D DP
+
+### 198 House Robber
+
+- In Python, @cache (also referred to as @lru_cache in the functools module) is a decorator used to cache the results of function calls. It means that if a function is called with the same arguments multiple times, the cached result from the first call is returned instead of re-computing the result.
+  
+  ```py
+  from functools import cache
+
+  @cache
+  def fibonacci(n):
+      if n < 2:
+          return n
+      return fibonacci(n-1) + fibonacci(n-2)
+
+  # The first time, fibonacci(10) will be computed from scratch
+  print(fibonacci(10))  # Output: 55
+
+  # The second time, the result for fibonacci(10) is retrieved from the cache
+  print(fibonacci(10))  # Output: 55 (but much faster)
+  ```
+
+  ```py
+  from functools import lru_cache
+
+  @lru_cache(maxsize=100)  # limit cache to 100 items
+  def fibonacci(n):
+      if n < 2:
+          return n
+      return fibonacci(n-1) + fibonacci(n-2)
+  ```
+
+- `dp = [*A]` create a shallow copy by unpacking
