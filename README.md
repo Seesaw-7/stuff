@@ -7,7 +7,7 @@ problems that I did the min time complexity but still not optimal
 6 105
 
 problems that I was slow to pass
-12 58 80 121 15 128 56 224 25 114
+12 58 80 121 15 128 56 224 25 114 139
 
 need to code w/o built-in funcs
 14
@@ -345,6 +345,16 @@ Greedy BFS
   A greedy algorithm might pick the item with the highest value-to-weight ratio, but this does not always lead to the best solution (e.g., choosing smaller items with slightly lower ratios could give a better total value).
   Dynamic programming considers all subsets of items and ensures the optimal combination by storing and using intermediate results.
 
+- Recursive DP can be quicker when:
+  * Early pruning or short-circuiting of the recursive calls allows for stopping as soon as a solution is found.
+  * Only a subset of subproblems needs to be solved (sparse subproblem space).
+  * The problem size or structure fits naturally into a recursive pattern.
+  * Better cache efficiency is achieved due to only solving a portion of the problem space.
+- Iterative DP is generally preferred when:
+  * You need to solve all subproblems anyway, and the overhead of managing recursion is higher.
+  * You want to avoid potential stack overflow issues for deep recursion.
+  * The problem size and structure are better suited for an
+
 ### 70 Climbing Stairs
 
 the number of choices to reach the current stair equals to # previous + # second previous
@@ -353,3 +363,11 @@ the number of choices to reach the current stair equals to # previous + # second
 
 if the current only depends on the previous and the second previous, no need to store an O(N) array
 
+### 139 Word Break
+
+- My solution is to backtrack. First keep all words that can start from the start of the string. Then for each word, recursively test the remaining string. If the current string is a word, return True. If all words exhaust and no true is returned, return False. This use backtrack to recursively test each word. With @cache or explicitly memorizing with dp, it saves time. Store if a position in a string lead to a False.
+  
+- Use traditional DP, where `dp[i]` dp[i] is set to true if a valid word (word sequence) ends there
+
+- This quesiton is exactly the same as the Jump Game, which I used traditional DP previously. I think that is a far more intuitive approach and I could hardly believe that I become even more stupid after solving 80 leetcode problems.
+  
