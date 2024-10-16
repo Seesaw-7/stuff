@@ -1266,3 +1266,7 @@ class LinkedList:
   ```
 
 - `dp = [*A]` create a shallow copy by unpacking
+
+### 322 Coin Change
+
+`dp = [0] + [amount+1 for _ in range(amount)]`

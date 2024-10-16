@@ -325,6 +325,10 @@ When you are not sure how to recurse for a tree problem, use scratch paper..
 [BFS vs DFS](https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/)
 Greedy BFS
 
+## Backtracking
+
+- Pruning is commonly used in algorithms like backtracking or search algorithms to reduce the number of possibilities that need to be explored, improving the efficiency of the algorithm. By "pruning" branches of the search tree that are known to lead to dead ends or suboptimal results, the algorithm can avoid redundant work and speed up the solution process.
+
 ## 1D DP
 
 - DP vs Divide & Conquer
@@ -371,3 +375,12 @@ if the current only depends on the previous and the second previous, no need to 
 
 - This quesiton is exactly the same as the Jump Game, which I used traditional DP previously. I think that is a far more intuitive approach and I could hardly believe that I become even more stupid after solving 80 leetcode problems.
   
+### 322 Coin Change
+
+- Extremely famous. Use 1D dp when 1 optimal exists for 1 position (input length/value) `for i for c, dp[i+c] = min(dp[i+c], dp[i]+1)` 
+
+## Edge case
+
+- check when input value == 0 or == 1, check when input array length == 0 or == 1
+  
+- always check whether the index is out of range
