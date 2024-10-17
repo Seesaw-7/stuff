@@ -318,6 +318,16 @@ Inorder to fit in O(1) space complexity, we can keep on the currant level, and a
 
 When you are not sure how to recurse for a tree problem, use scratch paper..
 
+### 124 Binary Tree Maximum Path Sum
+
+- My sol is to return (max_continue, max_discontinue). returning max_continue that the parent node can further stretch the value, returnign max_discontinue that the parent node cannot add its own value on.
+
+- But we can just use a global varaible to hold the max_discontinue, and no need to return it (but i think to create a global variable like this is not a very safe idea).
+
+### 173 Binary Search Tree Iterator
+
+- Use stack for iterative in-order/pre-order/post-order traversal
+
 ## Graphs
 
 ### 45 Jump Game II
@@ -350,14 +360,14 @@ Greedy BFS
   Dynamic programming considers all subsets of items and ensures the optimal combination by storing and using intermediate results.
 
 - Recursive DP can be quicker when:
-  * Early pruning or short-circuiting of the recursive calls allows for stopping as soon as a solution is found.
-  * Only a subset of subproblems needs to be solved (sparse subproblem space).
-  * The problem size or structure fits naturally into a recursive pattern.
-  * Better cache efficiency is achieved due to only solving a portion of the problem space.
+  - Early pruning or short-circuiting of the recursive calls allows for stopping as soon as a solution is found.
+  - Only a subset of subproblems needs to be solved (sparse subproblem space).
+  - The problem size or structure fits naturally into a recursive pattern.
+  - Better cache efficiency is achieved due to only solving a portion of the problem space.
 - Iterative DP is generally preferred when:
-  * You need to solve all subproblems anyway, and the overhead of managing recursion is higher.
-  * You want to avoid potential stack overflow issues for deep recursion.
-  * The problem size and structure are better suited for an
+  - You need to solve all subproblems anyway, and the overhead of managing recursion is higher.
+  - You want to avoid potential stack overflow issues for deep recursion.
+  - The problem size and structure are better suited for an
 
 ### 70 Climbing Stairs
 
@@ -377,7 +387,7 @@ if the current only depends on the previous and the second previous, no need to 
   
 ### 322 Coin Change
 
-- Extremely famous. Use 1D dp when 1 optimal exists for 1 position (input length/value) `for i for c, dp[i+c] = min(dp[i+c], dp[i]+1)` 
+- Extremely famous. Use 1D dp when 1 optimal exists for 1 position (input length/value) `for i for c, dp[i+c] = min(dp[i+c], dp[i]+1)`
 
 ### 300 Longest Increasing Subsequence
 
