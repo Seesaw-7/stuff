@@ -1269,4 +1269,33 @@ class LinkedList:
 
 ### 322 Coin Change
 
-`dp = [0] + [amount+1 for _ in range(amount)]`
+- Initialize a list `dp = [0] + [amount+1 for _ in range(amount)]`
+
+### 300 Longest Increasing Substring
+
+- `bisect.bisect(list, target)` for `bisect_right`, `bisect.bisect_left()` for finding the left most possible insertion index to maintain the ordered list.
+  
+  ```py
+  import bisect
+
+  my_list = [1, 2, 4, 4, 5]
+  index = bisect.bisect(my_list, 4)
+  print(index)  # Output: 4
+  ```
+
+  ```py
+  import bisect
+
+  my_list = [1, 2, 4, 4, 5]
+  index = bisect.bisect_left(my_list, 4)
+  print(index)  # Output: 2
+  ```
+  
+  ```py
+  import bisect
+
+  my_list = [1, 3, 4, 7]
+  bisect.insort(my_list, 5) # inplace
+  print(my_list)  # Output: [1, 3, 4, 5, 7]
+  ```
+  

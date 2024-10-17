@@ -1,7 +1,7 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49
+14 45 189 274 11 49 300
 
 problems that I did the min time complexity but still not optimal
 6 105
@@ -13,7 +13,7 @@ need to code w/o built-in funcs
 14
 
 need to reconsider
-15(after 2 sum) 45 114(I was too tired to look at other solutions)
+15(after 2 sum) 45 114(I was too tired to look at other solutions) 300 (too many sols)
 
 problems with other solutions
 
@@ -378,6 +378,16 @@ if the current only depends on the previous and the second previous, no need to 
 ### 322 Coin Change
 
 - Extremely famous. Use 1D dp when 1 optimal exists for 1 position (input length/value) `for i for c, dp[i+c] = min(dp[i+c], dp[i]+1)` 
+
+### 300 Longest Increasing Subsequence
+
+- Extremely famous. My sol: if i is iterated, dp[i] denotes the length of LIS till i. if nums[i] is smaller than nums[j] for i < j, then dp[j] = max(dp[i]+1, dp[j])
+
+- Another dp intuition is to look backward, that if nums[i] > nums[j], for j < i, dp[i] = max(dp[j]+1, dp[i])
+
+- Replacement plus binary search. This is amazing! find solution [here](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/?envType=study-plan-v2&envId=top-interview-150)
+
+- Binary Indexed Tree(BIT/Fenwick Tree): O(log n) for looking up the first i sum of an array, O(log n) to update the original array. The index of a parent node is calculated by unset the last set bit of its index, ie. i - i&(-i). see [here](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/)
 
 ## Edge case
 
