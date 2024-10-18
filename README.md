@@ -7,7 +7,7 @@ problems that I did the min time complexity but still not optimal
 6 105
 
 problems that I was slow to pass
-12 58 80 121 15 128 56 224 25 114 139
+12 58 80 121 15 128 56 224 25 114 139 236(28mins)
 
 need to code w/o built-in funcs
 14

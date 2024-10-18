@@ -1130,8 +1130,23 @@ class LinkedList:
 
 ## Binary Tree General
 
+### 222 Count Complete Tree Node
+
 an outer value is readable from inner scope, but not writable
 if you need to revise it, state it as nonlocal
+
+### 236 Lowest Common Ancestor of a Binary Tree
+
+```py
+if l:
+  return l
+elif r:
+  return r
+else:
+  return None
+
+return l or r
+```
 
 ### 138 Copy List with Random Pointer
 
