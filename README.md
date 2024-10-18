@@ -1,7 +1,7 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49 300
+14 45 189 274 11 49 300 222
 
 problems that I did the min time complexity but still not optimal
 6 105
@@ -327,6 +327,16 @@ When you are not sure how to recurse for a tree problem, use scratch paper..
 ### 173 Binary Search Tree Iterator
 
 - Use stack for iterative in-order/pre-order/post-order traversal
+
+### 222 Count Complete Tree Node
+
+- For a complete tree:
+  - If left sub tree height equals right sub tree height then,
+    a. left sub tree is perfect binary tree
+    b. right sub tree is complete binary tree
+  - If left sub tree height greater than right sub tree height then,
+    a. left sub tree is complete binary tree
+    b. right sub tree is perfect binary tree
 
 ## Graphs
 

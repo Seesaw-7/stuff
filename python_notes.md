@@ -1128,6 +1128,11 @@ class LinkedList:
         current = None
 ```
 
+## Binary Tree General
+
+an outer value is readable from inner scope, but not writable
+if you need to revise it, state it as nonlocal
+
 ### 138 Copy List with Random Pointer
 
 - instances of class can be used as dictionary keys, cuz they are memory addresses.
@@ -1290,7 +1295,7 @@ class LinkedList:
   index = bisect.bisect_left(my_list, 4)
   print(index)  # Output: 2
   ```
-  
+
   ```py
   import bisect
 
