@@ -349,6 +349,16 @@ Greedy BFS
 
 - Pruning is commonly used in algorithms like backtracking or search algorithms to reduce the number of possibilities that need to be explored, improving the efficiency of the algorithm. By "pruning" branches of the search tree that are known to lead to dead ends or suboptimal results, the algorithm can avoid redundant work and speed up the solution process.
 
+### 17 Letter Combinations of a Phone Number
+
+- an iterative approach is easy
+  
+- a recursive approach is also easy
+
+- pseudo backtrack with recursion is easy, return from the leaf, and appending the path in each parent call
+
+- a backtrack approach with dfs is worth noticing. We continuously feed the first possible currant path to futher iteration, and later come back to the second possible path. Only when we meet the leaf (null value), do we append this path to the golbal ans.
+
 ## 1D DP
 
 - DP vs Divide & Conquer
