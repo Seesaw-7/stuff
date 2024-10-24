@@ -1,5 +1,5 @@
 class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
+    def minimumTotal(self, triangle: list[list[int]]) -> int:
 
         depth = len(triangle)
         dp = [[float('inf') for _ in range(depth+1)] for _ in range(depth+1)]
