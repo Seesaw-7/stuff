@@ -1,7 +1,7 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49 300 222
+14 45 189 274 11 49 300 222 
 
 problems that I did the min time complexity but still not optimal
 6 105
@@ -13,7 +13,7 @@ need to code w/o built-in funcs
 14
 
 need to reconsider
-15(after 2 sum) 45 114(I was too tired to look at other solutions) 300 (too many sols)
+15(after 2 sum) 45 114(I was too tired to look at other solutions) 300 (too many sols) 5
 
 problems with other solutions
 
@@ -418,6 +418,16 @@ if the current only depends on the previous and the second previous, no need to 
 - Replacement plus binary search. This is amazing! find solution [here](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/?envType=study-plan-v2&envId=top-interview-150)
 
 - Binary Indexed Tree(BIT/Fenwick Tree): O(log n) for looking up the first i sum of an array, O(log n) to update the original array. The index of a parent node is calculated by unset the last set bit of its index, ie. i - i&(-i). see [here](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/)
+
+## Multidimensional DP
+
+### 5 Longest Plindromic Substring
+
+- my sol is to expand around the centre of every char, which takes O(N^2)
+
+- Another sol is to use dp. `dp[i][j]` denotes whether a string is valid starting from i and ending in j. They will occupy the top right half of the matrix. This uses the same idea as expanding around the centre, and the same time complexity `dp[i][j]` is valid if `s[i] == s[j]` and `dp[i+1][j-1]` is valid. So, iterating bottom-up(outer) and left-right(inner) The starting points are that `dp[x][x]` should be True for all x. Besides, take care that when `s[i] = s[i+1]`, `dp[i][i+1]` should also be True, since the centre could be the centre of two neighbouring letters.
+
+- Another sol is to use Manacher's ALgorithm
 
 ## Edge case
 
