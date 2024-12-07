@@ -1,5 +1,5 @@
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generateParenthesis(self, n: int) -> list[str]:
         ans = []
         def helper(curr: str, open:int, closed:int):
             if open == n and closed == n:

@@ -1,7 +1,7 @@
 # My Leetcode solutions and notes
 
 problems that I did not provide solutions with minimum time complexity
-14 45 189 274 11 49 300 222 
+14 45 189 274 11 49 300 222
 
 problems that I did the min time complexity but still not optimal
 6 105
@@ -150,6 +150,13 @@ since the type is int, and it only contains 0 or 1, we can use the second to las
 - convert int to str to manipulate each digit in parallel `n = sum([int(x) ** 2 for x in str(n)])`
 
 - can be solved with fast and slow pionter
+
+### 128 Longest Consecutive sequence
+
+- Union find. I used a dict to store the currant maximum length at the begin and end of a consecutive sequence. And update it in each iteration.
+
+- a very nice solution is provided by https://leetcode.com/problems/longest-consecutive-sequence/solutions/41057/simple-o-n-with-explanation-just-walk-each-streak/?envType=study-plan-v2&envId=top-interview-150
+  To exhaust the increasing seq of the currant i once meet i. So, no need to consider the decreasing seq anymore.
 
 ## Intervals
 
@@ -358,6 +365,18 @@ Greedy BFS
 - pseudo backtrack with recursion is easy, return from the leaf, and appending the path in each parent call
 
 - a backtrack approach with dfs is worth noticing. We continuously feed the first possible currant path to futher iteration, and later come back to the second possible path. Only when we meet the leaf (null value), do we append this path to the golbal ans.
+
+### 79 Word Search
+
+- Very popular! Use backtrace(dfs) (recursion) in 2D maze to find path, if we can move in four directions. Use dp without dfs if we can move in only two directions. I think dp+dfs and backtrace with dfs are somehow equivalent? But dp here does not seem to be feasible. Not sure. Use bactrace with dfs for higher dimensions?
+
+- Recursion is a tool, while backtrack is a strategy. Backtrack involves exploring possible solutions, abandoning ("backtracking" from) paths that do not lead to a valid solution, and proceeding to alternative paths. We often abandon an invalid path at the very first of the function code, and proceed to further layer without checking path validity. We often do not check validity before proceeding to further layer, cuz we'll need to handle too many checks.
+
+## Math
+
+### 172 Factorial Trailing Zeros
+
+The number of trailing zeros is min(num2, num5), which is always num5
 
 ## 1D DP
 
