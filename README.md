@@ -378,6 +378,10 @@ Greedy BFS
 
 The number of trailing zeros is min(num2, num5), which is always num5
 
+### 69 Sqrt(x)
+
+Use binary search
+
 ## 1D DP
 
 - DP vs Divide & Conquer

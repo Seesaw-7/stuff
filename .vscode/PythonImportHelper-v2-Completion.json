@@ -1,0 +1,1329 @@
+[
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "bisect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bisect",
+        "description": "bisect",
+        "detail": "bisect",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "sql_queries.17_letter_combinations_of_a_phone_number",
+        "description": "sql_queries.17_letter_combinations_of_a_phone_number",
+        "peekOfCode": "class Solution:\n    # iteration\n    def letterCombinations1(self, digits: str) -> list[str]:\n        com = {\"2\":\"abc\", \"3\":\"def\", \"4\":\"ghi\", \"5\":\"jkl\", \"6\":\"mno\", \"7\":\"pqrs\", \"8\":\"tuv\",\"9\":\"wxyz\"}\n        if not digits:\n            return []\n        ans = [\"\"]\n        for d in digits:\n            new_ans = []\n            for a in ans:",
+        "detail": "sql_queries.17_letter_combinations_of_a_phone_number",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "100_same_tree",
+        "description": "100_same_tree",
+        "peekOfCode": "class Solution:\n    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:\n        if not p and not q:\n            return True\n        elif p or q:\n            return False\n        elif p and not q:\n            return False\n        a = p.val == q.val\n        b = self.isSameTree(p.left, q.left)",
+        "detail": "100_same_tree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "101_symmetric_tree",
+        "description": "101_symmetric_tree",
+        "peekOfCode": "class Solution:\n    # Space Complexity O(h) cuz it's DFS, and h is the height of the tree\n    # Time complexity O(N) cuz traversing\n    def isSymmetric(self, root: Optional[TreeNode]) -> bool:\n        def isSymm(left, right) -> bool:\n            if left and right:\n                a = left.val == right.val\n                b = isSymm(left.left, right.right)\n                c = isSymm(left.right, right.left)\n                return a and b and c",
+        "detail": "101_symmetric_tree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "104_maximum_depth_of_subtree",
+        "description": "104_maximum_depth_of_subtree",
+        "peekOfCode": "class Solution:\n    # divide and conquer recursion (recursive DFS)\n    def _depth_helper(self, node, max_lvl: int) -> int:\n        if not node:\n            return max_lvl\n        left_max = self._depth_helper(node.left, max_lvl + 1)\n        right_max = self._depth_helper(node.right, max_lvl + 1)\n        return max(left_max, right_max)\n    def maxDepth1(self, root: Optional[TreeNode]) -> int:\n        max_lvl = 0",
+        "detail": "104_maximum_depth_of_subtree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "105_construct_binary_tree_from_inorder_and_preorder_traversal",
+        "description": "105_construct_binary_tree_from_inorder_and_preorder_traversal",
+        "peekOfCode": "class Solution:\n    # iterative with stack to take the parents of left nodes\n    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:\n        stack = []\n        if not preorder:\n            return None\n        root = TreeNode(preorder[0])\n        temp = root\n        for i,val in enumerate(preorder):\n            if i == 0:",
+        "detail": "105_construct_binary_tree_from_inorder_and_preorder_traversal",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "106_construct_binary_tree_from_inorder_and_postorder_traversal",
+        "description": "106_construct_binary_tree_from_inorder_and_postorder_traversal",
+        "peekOfCode": "class Solution:\n    def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:\n        if not inorder:\n            return None\n        root_val = postorder.pop()\n        root = TreeNode(root_val)\n        idx = inorder.index(root_val)\n        root.right = self.buildTree(inorder[idx+1:], postorder)\n        root.left = self.buildTree(inorder[:idx], postorder)\n        return root",
+        "detail": "106_construct_binary_tree_from_inorder_and_postorder_traversal",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "112_path_sum",
+        "description": "112_path_sum",
+        "peekOfCode": "class Solution:\n    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:\n        def helper(node, curr_sum, targetSum):\n            if not node:\n                return curr_sum\n            curr_sum += node.val\n            suml = helper(node.left, curr_sum, targetSum)\n            sumr = helper(node.right, curr_sum, targetSum)\n            if not node.left and not node.right:\n                return curr_sum",
+        "detail": "112_path_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "114_flatten_binary_to_linked_list",
+        "description": "114_flatten_binary_to_linked_list",
+        "peekOfCode": "class Solution:\n    def flatten(self, root: Optional[TreeNode]) -> None:\n        \"\"\"\n        Do not return anything, modify root in-place instead.\n        \"\"\"\n        def helper(node):\n            if not node:\n                return node\n            if not node.left and not node.right:\n                return node",
+        "detail": "114_flatten_binary_to_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "117_populating_next_right_pointers_in_each_node_II",
+        "description": "117_populating_next_right_pointers_in_each_node_II",
+        "peekOfCode": "class Node:\n    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):\n        self.val = val\n        self.left = left\n        self.right = right\n        self.next = next\n\"\"\"\nfrom collections import deque\nclass Solution:\n    # BFS 11mins",
+        "detail": "117_populating_next_right_pointers_in_each_node_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "117_populating_next_right_pointers_in_each_node_II",
+        "description": "117_populating_next_right_pointers_in_each_node_II",
+        "peekOfCode": "class Solution:\n    # BFS 11mins\n    def connect1(self, root: 'Node') -> 'Node':\n        if not root:\n            return root\n        queue = deque([(root, 0)])\n        while queue:\n            curr = queue.popleft()\n            if not queue or queue[0][1] != curr[1]:\n                curr[0].next = None",
+        "detail": "117_populating_next_right_pointers_in_each_node_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "11_container_with_most_water",
+        "description": "11_container_with_most_water",
+        "peekOfCode": "class Solution:\n    # O(N^2) time limit\n    def maxArea1(self, height: list[int]) -> int:\n        max_water = 0\n        len_height = len(height)\n        for l in range(len_height-1):\n            for r in range(l+1, len_height):\n                max_water = max(max_water, (r-l) * min(height[l], height[r]))\n        return max_water \n    # O(N) Two pointer",
+        "detail": "11_container_with_most_water",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "120_triangle",
+        "description": "120_triangle",
+        "peekOfCode": "class Solution:\n    def minimumTotal(self, triangle: list[list[int]]) -> int:\n        depth = len(triangle)\n        dp = [[float('inf') for _ in range(depth+1)] for _ in range(depth+1)]\n        def helper(i:int, idx:int) -> int:\n            if i == depth:\n                return 0\n            if dp[i+1][idx] == float('inf'):\n                dp[i+1][idx] = helper(i+1, idx)\n            if  dp[i+1][idx+1] == float('inf'):",
+        "detail": "120_triangle",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "121_best_time_to_buy_and_sell_stock",
+        "description": "121_best_time_to_buy_and_sell_stock",
+        "peekOfCode": "class Solution: \n    # accepted O(nlogn)\n    def maxProfit1(self, prices: list[int]) -> int:\n        def helper(l: list[int]) -> int:\n            if len(l) == 1 or len(l) == 0:\n                return 0\n            else:\n                min_value = min(l)\n                min_idx = l.index(min_value)\n                print(min_idx)",
+        "detail": "121_best_time_to_buy_and_sell_stock",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "122_best_time_to_buy_and_sell_stock_II",
+        "description": "122_best_time_to_buy_and_sell_stock_II",
+        "peekOfCode": "class Solution:\n    # O(n) time, O(1) space\n    def maxProfit1(self, prices: list[int]) -> int:\n        profits = 0\n        if len(prices) == 0:\n            return profits\n        buy_flag = 0 # whether currently holding a share\n        buy = prices[0]\n        for i in range(0, len(prices)-1):\n            if prices[i] > buy and buy_flag:",
+        "detail": "122_best_time_to_buy_and_sell_stock_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "124_binary_tree_maximum_path_sum",
+        "description": "124_binary_tree_maximum_path_sum",
+        "peekOfCode": "class Solution:\n    def maxPathSum1(self, root: Optional[TreeNode]) -> int:\n        def helper(node: Optional[TreeNode]) -> (int, int):\n            if not node:\n                return 0, 0\n            if not node.left and not node.right:\n                return node.val, node.val\n            elif not node.right:\n                a = helper(node.left)\n                max_con = max(a[0]+node.val, node.val)",
+        "detail": "124_binary_tree_maximum_path_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "125_valid_palindrome",
+        "description": "125_valid_palindrome",
+        "peekOfCode": "class Solution:\n    def isPalindrome1(self, s: str) -> bool:\n        len_s = len(s)\n        l = 0 # left\n        r = len_s - 1 # right\n        alphanumeric = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\"\n        while l < r:\n            while s[l] not in alphanumeric and l < len(s) - 1:\n                l += 1\n            while s[r] not in alphanumeric and r > 0:",
+        "detail": "125_valid_palindrome",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "129_sum_root_to_leaf_numbers",
+        "description": "129_sum_root_to_leaf_numbers",
+        "peekOfCode": "class Solution:\n    def sumNumbers(self, root: Optional[TreeNode]) -> int:\n        def helper(node, num):\n            if not node:\n                return 0\n            str_num = num + str(node.val)\n            if not node.left and not node.right:\n                return str_num\n            res = 0\n            if node.left:",
+        "detail": "129_sum_root_to_leaf_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "12_integer_to_roman",
+        "description": "12_integer_to_roman",
+        "peekOfCode": "class Solution:\n    def intToRoman(self, num: int) -> str:\n        rom = \"\"\n        int2rom = {1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M'}\n        vals = [1000, 500, 100, 50, 10, 5, 1]\n        for i, val in enumerate(vals):\n            n = num // val\n            if i < len(vals) - 1:\n                m = num // vals[i+1]\n            if n == 4 and i != 0:",
+        "detail": "12_integer_to_roman",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "134_gas_station",
+        "description": "134_gas_station",
+        "peekOfCode": "class Solution:\n    def canCompleteCircuit(self, gas: list[int], cost: list[int]) -> int:\n        num_stations = len(gas)\n        sub = [x-y for x,y in zip(gas, cost)]\n        if sum(sub) < 0:\n            return -1\n        amt = 0\n        temp = [0] * num_stations\n        for i in range(num_stations):\n            amt += sub[i]",
+        "detail": "134_gas_station",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "135_candy",
+        "description": "135_candy",
+        "peekOfCode": "class Solution:\n    def candy(self, ratings: list[int]) -> int:\n        n = len(ratings)\n        answer = [1 for _ in range(n)]\n        for i in range(n-1):\n            if ratings[i+1] > ratings[i]:\n                answer[i+1] = answer[i] + 1\n        for i in reversed(list(range(n-1))):\n            if ratings[i] > ratings[i+1] and answer[i] <= answer[i+1]:\n                answer[i] = answer[i+1] + 1",
+        "detail": "135_candy",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "138_copy_list_with_random_pointer",
+        "description": "138_copy_list_with_random_pointer",
+        "peekOfCode": "class Node:\n    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):\n        self.val = int(x)\n        self.next = next\n        self.random = random\n\"\"\"\nclass Solution:\n    # use list\n    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':\n        new_list = Node(0)",
+        "detail": "138_copy_list_with_random_pointer",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "138_copy_list_with_random_pointer",
+        "description": "138_copy_list_with_random_pointer",
+        "peekOfCode": "class Solution:\n    # use list\n    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':\n        new_list = Node(0)\n        dummy_new_head = new_list\n        dummy_old_head = head\n        new_nodes = []\n        old_nodes = []\n        while head:\n            old_nodes.append(head)",
+        "detail": "138_copy_list_with_random_pointer",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "139_word_break",
+        "description": "139_word_break",
+        "peekOfCode": "class Solution:\n    # use backtracking with cache\n    # tuple(wordDict) because cache store one series of function inputs as a key of a dict\n    def wordBreak1(self, s: str, wordDict: list[str]) -> bool:\n        @cache\n        def helper(s: str, wordDict) -> bool:\n            valid = []\n            for w in wordDict:\n                if s.find(w) == 0:\n                    valid.append(w)",
+        "detail": "139_word_break",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "13_roman_to_integer",
+        "description": "13_roman_to_integer",
+        "peekOfCode": "class Solution:\n    def romanToInt1(self, s: str) -> int:\n        res = 0\n        i = 0\n        while i < len(s):\n            if s[i] == 'M':\n                res += 1000\n            elif s[i] == 'D':\n                res += 500\n            elif s[i] == 'C':",
+        "detail": "13_roman_to_integer",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "141_linked_list_cycle",
+        "description": "141_linked_list_cycle",
+        "peekOfCode": "class Solution:\n    # fast and slow pointers\n    def hasCycle1(self, head: Optional[ListNode]) -> bool:\n        if not head:\n            return False\n        fast = head\n        slow = head\n        while fast.next and fast.next.next:\n            slow = slow.next\n            fast = fast.next.next",
+        "detail": "141_linked_list_cycle",
+        "documentation": {}
+    },
+    {
+        "label": "LRUCache1",
+        "kind": 6,
+        "importPath": "146_LRU_cache",
+        "description": "146_LRU_cache",
+        "peekOfCode": "class LRUCache1:\n    def __init__(self, capacity: int):\n        self.seq = deque()\n        self.data = {}\n        self.occurance = {}\n        self.capacity = capacity\n    def get(self, key: int) -> int:\n        if key in self.data:\n            self.seq.append(key)\n            self.occurance[key] += 1",
+        "detail": "146_LRU_cache",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "146_LRU_cache",
+        "description": "146_LRU_cache",
+        "peekOfCode": "class Node():\n    def __init__(self, key =0, val=0, next=None, prev=None):\n        self.key = key\n        self.val = val\n        self.next = next\n        self.prev = prev\nclass LRUCache2:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.head = Node()",
+        "detail": "146_LRU_cache",
+        "documentation": {}
+    },
+    {
+        "label": "LRUCache2",
+        "kind": 6,
+        "importPath": "146_LRU_cache",
+        "description": "146_LRU_cache",
+        "peekOfCode": "class LRUCache2:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.head = Node()\n        self.tail = Node(prev=self.head)\n        self.head.next = self.tail\n        self.key2node = {}\n    def get(self, key: int) -> int:\n        if key in self.key2node:\n            node = self.key2node[key]",
+        "detail": "146_LRU_cache",
+        "documentation": {}
+    },
+    {
+        "label": "LRUCache",
+        "kind": 6,
+        "importPath": "146_LRU_cache",
+        "description": "146_LRU_cache",
+        "peekOfCode": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.key2val = {}\n    def get(self, key: int) -> int:\n        if key in self.key2val:\n            val = self.key2val.pop(key)\n            self.key2val[key] = val\n        return self.key2val.get(key, -1)\n    def put(self, key: int, value: int) -> None:",
+        "detail": "146_LRU_cache",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "14_longest_common_prefix",
+        "description": "14_longest_common_prefix",
+        "peekOfCode": "class Solution:\n    def longestCommonPrefix1(self, strs: list[str]) -> str:\n        common = strs[0]\n        for s in strs:\n            while not s.startswith(common):\n                common = common[:-1]\n        return common\n    # Divide and conquer, copied from lc solutions\n    # https://leetcode.com/problems/longest-common-prefix/solutions/3224599/easy-and-simple-way-to-find-longest-common-prefix-python-3/?envType=study-plan-v2&envId=top-interview-150\n    def longestCommonPrefix(self, strs: list[str]) -> str:",
+        "detail": "14_longest_common_prefix",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "150_evaluate_reverse_polish_notation",
+        "description": "150_evaluate_reverse_polish_notation",
+        "peekOfCode": "class Solution:\n    def evalRPN(self, tokens: list[str]) -> int:\n        num_stack = []\n        for t in tokens:\n            if t.isdigit():\n                num_stack.append(int(t))\n            elif len(t) > 1 and t[0] == '-':\n                num_stack.append(int(t))\n            else:\n                a = num_stack.pop()",
+        "detail": "150_evaluate_reverse_polish_notation",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "151_reverse_words_in_a_string",
+        "description": "151_reverse_words_in_a_string",
+        "peekOfCode": "class Solution:\n    # fastest\n    def reverseWords1(self, s: str) -> str:\n        list_words = s.strip().split(' ')\n        list_words.reverse()\n        result = list_words[0]\n        for i in range(1, len(list_words)):\n            if list_words[i] != '' :\n                result += ' '\n                result += list_words[i]",
+        "detail": "151_reverse_words_in_a_string",
+        "documentation": {}
+    },
+    {
+        "label": "MinStack",
+        "kind": 6,
+        "importPath": "155_min_stack",
+        "description": "155_min_stack",
+        "peekOfCode": "class MinStack:\n    def __init__(self):\n        self.min_stack = []\n        self.stack = []\n    def push(self, val: int) -> None:\n        self.stack.append(val)\n        if not self.min_stack or val <= self.min_stack[-1]:\n            self.min_stack.append(val)\n    def pop(self) -> None:\n        a = self.stack.pop()",
+        "detail": "155_min_stack",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "15_3sum",
+        "description": "15_3sum",
+        "peekOfCode": "class Solution:\n    def threeSum(self, nums: list[int]) -> list[list[int]]:\n        ans = []\n        nums.sort()\n        n = len(nums)\n        k = n - 1\n        a, b = nums[0]-1, nums[1]-1\n        for i in range(n-2):\n            if nums[i] == a:\n                continue",
+        "detail": "15_3sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "167_two_sum_II_input_array_is_sorted",
+        "description": "167_two_sum_II_input_array_is_sorted",
+        "peekOfCode": "class Solution:\n    def twoSum(self, numbers: list[int], target: int) -> list[int]:\n        idx1 = 0\n        idx2 = len(numbers) - 1\n        while True:\n            if numbers[idx1] + numbers[idx2] == target:\n                return [idx1+1, idx2+1]\n            elif numbers[idx1] + numbers[idx2] < target:\n                idx1 += 1\n            else:",
+        "detail": "167_two_sum_II_input_array_is_sorted",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "169_majority_element",
+        "description": "169_majority_element",
+        "peekOfCode": "class Solution:\n    # Hash map\n    def majorityElement1(self, nums: list[int]) -> int:\n        cnt = defaultdict(int)\n        for num in nums:\n            cnt[num] += 1\n        max_k = nums[0]\n        max_v = 0\n        for k, v in cnt.items():\n            if v > max_v:",
+        "detail": "169_majority_element",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "172_factorial_trailing_zeros",
+        "description": "172_factorial_trailing_zeros",
+        "peekOfCode": "class Solution:\n    def count25(self, n:int) -> int:\n        num5 = 0\n        while n % 5 == 0 and n >= 5:\n            n = n // 5\n            num5 += 1\n        return num5\n    def trailingZeroes(self, n: int) -> int:\n        num5 = 0\n        for i in range(1, n+1):",
+        "detail": "172_factorial_trailing_zeros",
+        "documentation": {}
+    },
+    {
+        "label": "BSTIterator1",
+        "kind": 6,
+        "importPath": "173_binary_search_tree_iterator",
+        "description": "173_binary_search_tree_iterator",
+        "peekOfCode": "class BSTIterator1:\n    def __init__(self, root: Optional[TreeNode]):\n        self.plain = []\n        def helper(node:Optional[TreeNode]):\n            if not node:\n                return\n            helper(node.left)\n            if not self.plain:\n                self.plain = [node.val - 1]\n            self.plain.append(node.val)",
+        "detail": "173_binary_search_tree_iterator",
+        "documentation": {}
+    },
+    {
+        "label": "BSTIterator",
+        "kind": 6,
+        "importPath": "173_binary_search_tree_iterator",
+        "description": "173_binary_search_tree_iterator",
+        "peekOfCode": "class BSTIterator:\n    def __init__(self, root: Optional[TreeNode]):\n        self.stack = []\n        self.it = root\n        while self.it.left:\n            temp = self.it.left\n            self.it.left = None\n            self.stack.append(self.it)\n            self.it = temp\n        init = TreeNode(self.it.val-1)",
+        "detail": "173_binary_search_tree_iterator",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "189_rotate_array",
+        "description": "189_rotate_array",
+        "peekOfCode": "class Solution:\n    # O(n) Space, beacuse the worst case for tmep is O(n)\n    def rotate1(self, nums: list[int], k: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums in-place instead.\n        \"\"\"\n        k = k % len(nums)\n        temp = nums[len(nums)-k:]\n        i = len(nums) - 1\n        while (i >= k):",
+        "detail": "189_rotate_array",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "198_house_robber",
+        "description": "198_house_robber",
+        "peekOfCode": "class Solution:\n    # Tabulation O(N) Time, O(N) Space\n    def rob1(self, nums: List[int]) -> int:\n        if len(nums) == 0:\n            return 0\n        elif len(nums) == 1:\n            return nums[0]\n        dp = []\n        dp.append(nums[0])\n        dp.append(max(nums[0], nums[1]))",
+        "detail": "198_house_robber",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "19_remove_nth_node_from_end_of_list",
+        "description": "19_remove_nth_node_from_end_of_list",
+        "peekOfCode": "class Solution:\n    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:\n        dummy = ListNode()\n        dummy.next = head\n        temp = dummy\n        cnt = 0\n        while temp:\n            cnt += 1\n            temp = temp.next\n        temp = dummy",
+        "detail": "19_remove_nth_node_from_end_of_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "1_two_sum",
+        "description": "1_two_sum",
+        "peekOfCode": "class Solution:\n    # O(nlogn) use hash table to store positions, sort the array and use two pointers\n    def twoSum1(self, nums: list[int], target: int) -> list[int]:\n        mp = {}\n        equal = []\n        for i,num in enumerate(nums):\n            if num in mp and num + num == target:\n                equal = [mp[num], i]\n            else:\n                mp[num] = i",
+        "detail": "1_two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "202_happy_number",
+        "description": "202_happy_number",
+        "peekOfCode": "class Solution:\n    def isHappy1(self, n: int) -> bool:\n        loop = set()\n        accum = 0\n        num = n\n        while True:\n            accum = 0\n            while num > 0:\n                accum += (num % 10) ** 2\n                num = num // 10",
+        "detail": "202_happy_number",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "205_isomorphic_strings",
+        "description": "205_isomorphic_strings",
+        "peekOfCode": "class Solution:\n    def isIsomorphic1(self, s: str, t: str) -> bool:\n        s2t = {}\n        t_new = []\n        used_value = set()\n        for i,c in enumerate(s):\n            if t[i] in s2t:\n                t_new.append(s2t[t[i]])\n            else:\n                if c not in used_value and t[i] not in s2t:",
+        "detail": "205_isomorphic_strings",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "209_minimum_size_subarray_sum",
+        "description": "209_minimum_size_subarray_sum",
+        "peekOfCode": "class Solution:\n    # I miss understood the question which requires the sum equal to target\n    def minSubArrayLen1(self, target: int, nums: list[int]) -> int:\n        n = len(nums)\n        d = {}\n        for num in nums:\n            d1 = {num: 1}\n            for k, v in d.items():\n                if k+num <= target:\n                    d1[k+num] = min(v+1, d.get(k+num, n))",
+        "detail": "209_minimum_size_subarray_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "20_valid_parenthesis",
+        "description": "20_valid_parenthesis",
+        "peekOfCode": "class Solution:\n    def isValid(self, s: str) -> bool:\n        open_para = ['(', '{', '[']\n        close_para = [')', '}', ']']\n        mp = {')': '(', ']': '[', '}': '{'}\n        stack = []\n        for c in s:\n            if c in open_para:\n                stack.append(c)\n            elif c in close_para:",
+        "detail": "20_valid_parenthesis",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "219_contains_duplicate_II",
+        "description": "219_contains_duplicate_II",
+        "peekOfCode": "class Solution:\n    def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:\n        mp = {}\n        for i,num in enumerate(nums):\n            if num in mp:\n                if i - mp[num] <= k:\n                    return True\n            mp[num] = i\n        return False",
+        "detail": "219_contains_duplicate_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "21_merge_two_sorted_lists",
+        "description": "21_merge_two_sorted_lists",
+        "peekOfCode": "class Solution:\n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        dummyhead = ListNode()\n        temp = dummyhead\n        while list1 or list2:\n            if list1 and list2:\n                if list1.val <= list2.val:\n                    temp.next = list1\n                    list1 = list1.next\n                else:",
+        "detail": "21_merge_two_sorted_lists",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "222_count_complete_tree_node",
+        "description": "222_count_complete_tree_node",
+        "peekOfCode": "class Solution:\n    # this is still O(N) because it takes O(N) in the worse case\n    def countNodes1(self, root: Optional[TreeNode]) -> int:\n        depth = 0\n        temp = root\n        while temp:\n            depth += 1\n            temp = temp.left\n        temp_d = 0\n        cnt = 0",
+        "detail": "222_count_complete_tree_node",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "224_basic_calculator",
+        "description": "224_basic_calculator",
+        "peekOfCode": "class Solution:\n    def calculate1(self, s: str) -> int:\n        tokens = []\n        i  = 0\n        while i < len(s):\n            if s[i] != ' ':\n                if s[i].isdigit():\n                    num = []\n                    while i < len(s) and s[i].isdigit():\n                        num.append(s[i])",
+        "detail": "224_basic_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "226_invert_binary_tree",
+        "description": "226_invert_binary_tree",
+        "peekOfCode": "class Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if not root:\n            return None\n        self.invertTree(root.left)\n        self.invertTree(root.right)\n        root.left, root.right = root.right, root.left\n        return root",
+        "detail": "226_invert_binary_tree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "228_summary_ranges",
+        "description": "228_summary_ranges",
+        "peekOfCode": "class Solution:\n    def summaryRanges(self, nums: list[int]) -> list[str]:\n        ans = []\n        if len(nums) == 0:\n            return ans\n        start = 0\n        for i in range(1, len(nums)):\n            if nums[i] != nums[i-1] + 1:\n                if start == i - 1:\n                    ans.append(str(nums[start]))",
+        "detail": "228_summary_ranges",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "22_generate_parentheses",
+        "description": "22_generate_parentheses",
+        "peekOfCode": "class Solution:\n    def generateParenthesis(self, n: int) -> list[str]:\n        ans = []\n        def helper(curr: str, open:int, closed:int):\n            if open == n and closed == n:\n                ans.append(curr)\n                return\n            if open == closed:\n                new_curr = curr + '('\n                helper(new_curr, open+1, closed)",
+        "detail": "22_generate_parentheses",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "236_lowest_common_ancestor_of_a_binary_tree",
+        "description": "236_lowest_common_ancestor_of_a_binary_tree",
+        "peekOfCode": "class Solution:\n    # Time Limit\n    def lowestCommonAncestor1(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':\n        def find(node) -> int:\n            if not node:\n                return 0\n            if node == p or node == q:\n                return 1\n            l = find(node.left)\n            r = find(node.right)",
+        "detail": "236_lowest_common_ancestor_of_a_binary_tree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "238_product_of_array_except_self",
+        "description": "238_product_of_array_except_self",
+        "peekOfCode": "class Solution:\n    def productExceptSelf1(self, nums: list[int]) -> list[int]:\n        len_nums = len(nums)\n        forward_prods = [0] * len_nums\n        back_prods = [0] * len_nums\n        prod1 = 1\n        prod2 = 1\n        for i,num in enumerate(nums):\n            forward_prods[i] = prod1\n            prod1 *= num",
+        "detail": "238_product_of_array_except_self",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "242_valid_anagram",
+        "description": "242_valid_anagram",
+        "peekOfCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        return Counter(s) == Counter(t)",
+        "detail": "242_valid_anagram",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "25_reverse_nodes_in_k-group",
+        "description": "25_reverse_nodes_in_k-group",
+        "peekOfCode": "class Solution:\n    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\n        dummyhead = ListNode()\n        dummyhead.next = head\n        prev, curr = dummyhead, head\n        while True:\n            cnt = 1\n            left_reserved = curr\n            while curr and cnt < k:\n                curr = curr.next",
+        "detail": "25_reverse_nodes_in_k-group",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "26_remove_duplicates_from_sorted_array",
+        "description": "26_remove_duplicates_from_sorted_array",
+        "peekOfCode": "class Solution:\n    def removeDuplicates(self, nums: list[int]) -> int:\n        k = 1 if len(nums) else 0\n        for i in range(0, len(nums)-1):\n            if nums[i+1] != nums[k-1]:\n                k += 1\n                nums[k-1] = nums[i+1]\n        return k",
+        "detail": "26_remove_duplicates_from_sorted_array",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "274_H-index",
+        "description": "274_H-index",
+        "peekOfCode": "class Solution:\n    # brute force O(N^2)\n    def hIndex1(self, citations: list[int]) -> int:\n        h_index = 0\n        num_paper_satisfied = len(citations)\n        while num_paper_satisfied >= h_index:\n            h_index += 1\n            num_paper_satisfied = 0\n            for cit in citations:\n                if cit >= h_index:",
+        "detail": "274_H-index",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "27_remove_element",
+        "description": "27_remove_element",
+        "peekOfCode": "class Solution:\n    def removeElement(self, nums: list[int], val: int) -> int:\n        idx = 0\n        for i in nums:\n            if i != val:\n                nums[idx] = i\n                idx += 1\n        return idx",
+        "detail": "27_remove_element",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "289_game_of_life",
+        "description": "289_game_of_life",
+        "peekOfCode": "class Solution:\n    def gameOfLife(self, board: list[list[int]]) -> None:\n        \"\"\"\n        Do not return anything, modify board in-place instead.\n        \"\"\"\n        temp_live = []\n        temp_die = []\n        m = len(board)\n        n = len(board[0])\n        for i in range(m):",
+        "detail": "289_game_of_life",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "28_find_the_index_of_the_first_occurance_in_a_string",
+        "description": "28_find_the_index_of_the_first_occurance_in_a_string",
+        "peekOfCode": "class Solution:\n    # sliding window\n    def strStr1(self, haystack: str, needle: str) -> int:\n        len_needle = len(needle)\n        for i in range(len(haystack)-len_needle+1):\n            if haystack[i:i+len_needle] == needle:\n                return i\n        return -1\n    # candidate elimination\n    def strStr(self, haystack: str, needle: str) -> int:",
+        "detail": "28_find_the_index_of_the_first_occurance_in_a_string",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "290_word_pattern",
+        "description": "290_word_pattern",
+        "peekOfCode": "class Solution:\n    def wordPattern(self, pattern: str, s: str) -> bool:\n        s = s.split()\n        return len(s) == len(pattern) and len(set(zip(pattern, s))) == len(set(pattern)) == len(set(s))",
+        "detail": "290_word_pattern",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "2_add_two_numbers",
+        "description": "2_add_two_numbers",
+        "peekOfCode": "class Solution:\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:\n        carry = 0\n        summ = l1.val + l2.val\n        carry = summ // 10\n        l1.val = summ % 10\n        head = l1\n        while l1.next or l2.next or carry:\n            if l1.next and l2.next:\n                l1 = l1.next",
+        "detail": "2_add_two_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "300_longest_increasing_subsequence",
+        "description": "300_longest_increasing_subsequence",
+        "peekOfCode": "class Solution:\n    # DP O(N^2)\n    def lengthOfLIS1(self, nums: list[int]) -> int:\n        if not nums:\n            return 0\n        len_nums = len(nums)\n        dp = [0 for _ in range(len_nums)]\n        for i in range(len_nums):\n            for j in range(i, len_nums):\n                if nums[i] < nums[j]:",
+        "detail": "300_longest_increasing_subsequence",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "30_substring_with_concatenation_of_all_words",
+        "description": "30_substring_with_concatenation_of_all_words",
+        "peekOfCode": "class Solution:\n    def findSubstring1(self, s: str, words: list[str]) -> list[int]:\n        win_size = len(words[0])\n        num_words = len(words)\n        word_set = set(words)\n        valid = deque()\n        cnt = Counter(words)\n        not_appeared = cnt.copy()\n        i = 0\n        ans = []",
+        "detail": "30_substring_with_concatenation_of_all_words",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "322_coin_change",
+        "description": "322_coin_change",
+        "peekOfCode": "class Solution:\n    def coinChange1(self, coins: list[int], amount: int) -> int:\n        @cache\n        def helper(amount: int) -> int:\n            temp = [amount-x for x in coins if amount-x>=0]\n            if 0 in temp:\n                return 1\n            if not temp:\n                return -1\n            res = map(helper, temp)",
+        "detail": "322_coin_change",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "36_valid_sudoku",
+        "description": "36_valid_sudoku",
+        "peekOfCode": "class Solution:\n    def isValidSudoku(self, board: list[list[str]]) -> bool:\n        return (self.is_valid_row(board)\n                and self.is_valid_col(board)\n                and self.is_valid_grid(board))\n    @staticmethod\n    def is_valid_row1(board):\n        for i in board:\n            cnt = {}\n            for j in i:",
+        "detail": "36_valid_sudoku",
+        "documentation": {}
+    },
+    {
+        "label": "RandomizedSet1",
+        "kind": 6,
+        "importPath": "380_insert_delete_getRandom_O(1)",
+        "description": "380_insert_delete_getRandom_O(1)",
+        "peekOfCode": "class RandomizedSet1:\n    def __init__(self):\n        self.elements = set()\n        self.elt_list = []\n    def insert(self, val: int) -> bool:\n        if val in self.elements:\n            return False\n        else:\n            self.elements.add(val)\n            self.elt_list.append(val)",
+        "detail": "380_insert_delete_getRandom_O(1)",
+        "documentation": {}
+    },
+    {
+        "label": "RandomizedSet",
+        "kind": 6,
+        "importPath": "380_insert_delete_getRandom_O(1)",
+        "description": "380_insert_delete_getRandom_O(1)",
+        "peekOfCode": "class RandomizedSet:\n    def __init__(self):\n        self.elt_list = []\n        self.value_pos = {} # records the position of value in the list\n    def insert(self, val: int) -> bool:\n        if val in self.value_pos:\n            return False\n        else:\n            self.value_pos[val] = len(self.elt_list)\n            self.elt_list.append(val)",
+        "detail": "380_insert_delete_getRandom_O(1)",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "383_ransom_note",
+        "description": "383_ransom_note",
+        "peekOfCode": "class Solution:\n    def canConstruct(self, ransomNote: str, magazine: str) -> bool:\n        mag = Counter(magazine)\n        ransom = Counter(ransomNote)\n        return mag >= ransom\n        # can also use mag - ransom",
+        "detail": "383_ransom_note",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "38_find_the_index_of_the_first_occurance_in_a_string",
+        "description": "38_find_the_index_of_the_first_occurance_in_a_string",
+        "peekOfCode": "class Solution:\n    # sliding window\n    def strStr1(self, haystack: str, needle: str) -> int:\n        len_needle = len(needle)\n        for i in range(len(haystack)-len_needle+1):\n            if haystack[i:i+len_needle] == needle:\n                return i\n        return -1\n    # candidate elimination\n    def strStr(self, haystack: str, needle: str) -> int:",
+        "detail": "38_find_the_index_of_the_first_occurance_in_a_string",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "39_combination_sum",
+        "description": "39_combination_sum",
+        "peekOfCode": "class Solution:\n    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:\n        len_c = len(candidates)\n        ans = []\n        def helper(idx:int, curr: list[int]) -> None:\n            sum_curr = sum(curr)\n            if sum_curr == target:\n                ans.append(curr)\n                return\n            elif sum_curr > target:",
+        "detail": "39_combination_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "3_longest-substring-without-repeating-characters",
+        "description": "3_longest-substring-without-repeating-characters",
+        "peekOfCode": "class Solution:\n    # Accepted, beating 9.72% in time, 24.88% in memory\n    # Time complexity O(n^2)\n    def lengthOfLongestSubstring_v1(self, s: str) -> int:\n        max_len = 0\n        for i in range(0, len(s)):\n            temp = set()\n            for j in range(i, len(s)):\n                if s[j] in temp:\n                    if len(temp) > max_len:",
+        "detail": "3_longest-substring-without-repeating-characters",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "42_trapping_rain_water",
+        "description": "42_trapping_rain_water",
+        "peekOfCode": "class Solution:\n    # Time limit\n    def trap1(self, height: list[int]) -> int:\n        n = len(height)\n        start = 0 # position of the currant left bar\n        level = 0 # height of the currant left bar\n        water = [0 for _ in range(n)] # water capacity\n        for i,num in enumerate(height):\n            if num >= level:\n                for j in range(start+1, i):",
+        "detail": "42_trapping_rain_water",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "452_minimum_number_of_arrows_to_burst_balloons",
+        "description": "452_minimum_number_of_arrows_to_burst_balloons",
+        "peekOfCode": "class Solution:\n    # effectively the maximum number of non-overlapping intervals\n    # first sort the intervals according to their left end,\n    # then we favor to replace the interval with a shorter right end to the non_overlap list,\n    # because they can potentially accomodate more non-overlapping intervals\n    # always greedily shooting where most intervals overlap is not globally optimal\n    def findMinArrowShots(self, points: list[list[int]]) -> int:\n        non_overlap = []\n        points.sort()\n        for ran in points:",
+        "detail": "452_minimum_number_of_arrows_to_burst_balloons",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "45_jump_game_II",
+        "description": "45_jump_game_II",
+        "peekOfCode": "class Solution:\n    # O(N^2) Iterative DP\n    def jump1(self, nums: list[int]) -> int:\n        len_nums = len(nums)\n        reach = [len_nums for x in range(len_nums)] #tuple.first record whether\n        reach[0] = 0\n        for i, num in enumerate(nums):\n            if reach[i] != len_nums: # this point is reachable\n                for j in range(1, num+1):\n                    if i+j < len_nums and reach[i+j] > reach[i] + 1:",
+        "detail": "45_jump_game_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "46_permutations",
+        "description": "46_permutations",
+        "peekOfCode": "class Solution:\n    def permute(self, nums: list[int]) -> list[list[int]]:\n        ans = []\n        def helper(curr: list[int], rem: list[int]):\n            if not rem:\n                ans.append(curr)\n                return\n            for i,r in enumerate(rem):\n                new_rem = rem[:i] + rem[i+1:]\n                new_curr = curr + [r]",
+        "detail": "46_permutations",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "48_rotate_image",
+        "description": "48_rotate_image",
+        "peekOfCode": "class Solution:\n    def rotate1(self, matrix: list[list[int]]) -> None:\n        \"\"\"\n        Do not return anything, modify matrix in-place instead.\n        \"\"\"\n        # matrix = [[7,4,1],[8,5,2],[9,6,3]] # cannot work because it's not in-place,\n                                            # it reallocates a new piece of memory to matrix\n        n = len(matrix[0])\n        for i in range(n):\n            for j in range(i+1, n):",
+        "detail": "48_rotate_image",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "49_group_anagrams",
+        "description": "49_group_anagrams",
+        "peekOfCode": "class Solution:\n    # extremely slow and clumsy\n    def groupAnagrams1(self, strs: list[str]) -> list[list[str]]:\n        ans = [[] for _ in range(101)]\n        w_c = [{} for _ in range(101)]\n        counter = [0 for _ in range(101)]\n        for w in strs:\n            cnt = Counter(w)\n            len_w = len(w)\n            flag = 0",
+        "detail": "49_group_anagrams",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "50_pow(x.n)",
+        "description": "50_pow(x.n)",
+        "peekOfCode": "class Solution:\n    @cache\n    def myPow(self, x: float, n: int) -> float:\n        if n < 0:\n            n *= -1\n            x = 1/x\n        if n == 0:\n            return 1\n        ans = self.myPow(x, n // 2)\n        if n % 2 == 0:",
+        "detail": "50_pow(x.n)",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "54_spiral_matrix",
+        "description": "54_spiral_matrix",
+        "peekOfCode": "class Solution:\n    def spiralOrder1(self, matrix: list[list[int]]) -> list[int]:\n        i = len(matrix[0])\n        j = len(matrix) - 1\n        num = i  * (j + 1)\n        k, l = i - 1, j - 1\n        ans = []\n        x, y = 0, -1\n        while i > 0 or j > 0 or k > 0 or l > 0:\n            if num == len(ans):",
+        "detail": "54_spiral_matrix",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "55_jump_game",
+        "description": "55_jump_game",
+        "peekOfCode": "class Solution:\n    # O(N^2)\n    def canJump1(self, nums: list[int]) -> bool:\n        len_num = len(nums)\n        reach = [0 for x in range(len_num)]\n        reach[0] = 1\n        len_num = len(nums)\n        for i, num in enumerate(nums):\n            if reach[i] == 1:\n                if num > 0:",
+        "detail": "55_jump_game",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "56_merge_intervals",
+        "description": "56_merge_intervals",
+        "peekOfCode": "class Solution:\n    def merge1(self, intervals: list[list[int]]) -> list[list[int]]:\n        intervals.sort()\n        ans = []\n        temp = intervals[0]\n        max_end = intervals[0][1]\n        for i in range(1, len(intervals)):\n            if intervals[i][0] <= max_end:\n                max_end = max(max_end, intervals[i][1])\n                temp[1] = max_end",
+        "detail": "56_merge_intervals",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "57_insert_interval",
+        "description": "57_insert_interval",
+        "peekOfCode": "class Solution:\n    def insert1(self, intervals: list[list[int]], newInterval: list[int]) -> list[list[int]]:\n        ans = []\n        flag = 0 # whether the new interval has been inserted\n        for ran in intervals:\n            if not flag:\n                if ran[1] < newInterval[0]:\n                    ans.append(ran)\n                elif ran[0] <= newInterval[0] and ran[1] >= newInterval[0]:\n                    ans.append([ran[0], max(ran[1], newInterval[1])])",
+        "detail": "57_insert_interval",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "58_length_of_last_word",
+        "description": "58_length_of_last_word",
+        "peekOfCode": "class Solution:\n    # with built-in\n    def lengthOfLastWord1(self, s: str) -> int:\n        words = s.strip().split()\n        return len(words[-1])\n    # do not use built-in\n    def lengthOfLastWord(self, s: str) -> int:\n        flag = 0\n        cnt = 0\n        for c in reversed(s):",
+        "detail": "58_length_of_last_word",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "5_longest_palindromic_substring",
+        "description": "5_longest_palindromic_substring",
+        "peekOfCode": "class Solution:\n    # May, 2024, brute force\n    @staticmethod\n    def check(s: str) -> bool:\n        for i in range(len(s)//2):\n            if s[i] != s[len(s)-i-1]:\n                return False\n        return True\n    def longestPalindrome(self, s: str) -> str:\n        if s == \"\":",
+        "detail": "5_longest_palindromic_substring",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "61_rotate_list",
+        "description": "61_rotate_list",
+        "peekOfCode": "class Solution:\n    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\n        num = 0\n        temp = head\n        if not temp:\n            return None\n        while temp:\n            if temp.next:\n                temp = temp.next\n            else:",
+        "detail": "61_rotate_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "63_unique_paths_II",
+        "description": "63_unique_paths_II",
+        "peekOfCode": "class Solution:\n    def uniquePathsWithObstacles(self, obstacleGrid:list[list[int]]) -> int:\n        m = len(obstacleGrid)\n        n = len(obstacleGrid[0])\n        dp = [[0 for _ in range(n)] for _ in range(m)]\n        for i in range(m):\n            for j in range(n):\n                if obstacleGrid[i][j] == 1:\n                    continue\n                if i == 0 and j == 0:",
+        "detail": "63_unique_paths_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "64_minimum_path_sum",
+        "description": "64_minimum_path_sum",
+        "peekOfCode": "class Solution:\n    # 6 mins\n    def minPathSum(self, grid: list[list[int]]) -> int:\n        m = len(grid)\n        n = len(grid[0])\n        dp = [[201 for _ in range(n)] for _ in range(m)]\n        for i in range(m):\n            for j in range(n):\n                if i == 0 and j == 0:\n                    dp[0][0] = grid[0][0]",
+        "detail": "64_minimum_path_sum",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "66_plus_one",
+        "description": "66_plus_one",
+        "peekOfCode": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        xstr = str(x)\n        n = len(xstr)\n        for i in range(n // 2):\n            if xstr[i] != xstr[~i]:\n                return False\n        return True",
+        "detail": "66_plus_one",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "68_text_justification",
+        "description": "68_text_justification",
+        "peekOfCode": "class Solution:\n    def fullJustify(self, words: list[str], maxWidth: int) -> list[str]:\n        curr_w = 0 # currant width, minus one extra space\n        curr_num = 0 # currant number of words\n        curr_list = [] # currant word list in this line\n        ans = []\n        for i,w in enumerate(words):\n            if curr_w + len(w) + curr_num <= maxWidth:\n                curr_w += len(w)\n                curr_num += 1",
+        "detail": "68_text_justification",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "69_sqrt(x)",
+        "description": "69_sqrt(x)",
+        "peekOfCode": "class Solution:\n    def mySqrt(self, x: int) -> int:\n        for i in range(0, x+1):\n            num = i * i\n            if num == x:\n                return i\n            if num > x:\n                return i-1\n    def mySqrt(self, x: int) -> int:\n        if x == 0 or x == 1:",
+        "detail": "69_sqrt(x)",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "6_zigzag_conversion",
+        "description": "6_zigzag_conversion",
+        "peekOfCode": "class Solution:\n    # O(N) but very slow\n    def convert1(self, s: str, numRows: int) -> str:\n        l = []\n        indicator = 0\n        i = 0\n        while i < len(s):\n            nested = [' ' for _ in range(numRows)]\n            if indicator == 0:\n                for j in range(i, i+numRows):",
+        "detail": "6_zigzag_conversion",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "70_climbing_stairs",
+        "description": "70_climbing_stairs",
+        "peekOfCode": "class Solution:\n    # iterative dp\n    def climbStairs1(self, n: int) -> int:\n        if n == 1:\n            return 1\n        elif n == 2:\n            return 2\n        dp = [0 for _ in range(n)]\n        dp[0] = 1\n        dp[1] = 2",
+        "detail": "70_climbing_stairs",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "71_simplify_path",
+        "description": "71_simplify_path",
+        "peekOfCode": "class Solution:\n    # 35 min, push single char to stack\n    def simplifyPath1(self, path: str) -> str:\n        ans = []\n        for c in path:\n            if c == '/':\n                if len(ans) > 3 and ans[-1] == '.' and ans[-2] == '.' and ans[-3] != '/': # meaning previous is a file name\n                    ans.append('/')\n                elif len(ans) > 2 and ans[-1] == '.' and ans[-2] == '.': # need to back to prev layer\n                    ans.pop() #pop .",
+        "detail": "71_simplify_path",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "72_edit_distance",
+        "description": "72_edit_distance",
+        "peekOfCode": "class Solution:\n    def minDistance(self, word1: str, word2: str) -> int:\n        m = len(word1)\n        n = len(word2)\n        dp = [[i]+[-1 for _ in range(m)] for i in range(n+1)]\n        dp[0] = [i for i in range(m+1)]\n        for i in range(1, n+1):\n            for j in range(1, m+1):\n                rep = 0 if word2[i-1] == word1[j-1] else 1\n                dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1] +rep)",
+        "detail": "72_edit_distance",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "73_set_matrix_zeros",
+        "description": "73_set_matrix_zeros",
+        "peekOfCode": "class Solution:\n    # O(n) space\n    def setZeroes(self, matrix: list[list[int]]) -> None:\n        \"\"\"\n        Do not return anything, modify matrix in-place instead.\n        \"\"\"\n        m = len(matrix)\n        n = len(matrix[0])\n        temp = []\n        for i, line in enumerate(matrix):",
+        "detail": "73_set_matrix_zeros",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "79_word_search",
+        "description": "79_word_search",
+        "peekOfCode": "class Solution:\n    def exist(self, board: list[list[str]], word: str) -> bool:\n        n = len(board)\n        m = len(board[0])\n        len_word = len(word)\n        def helper(i:int, j:int, path:set((int,int))) -> bool:\n            len_path = len(path)\n            if len_path == len_word:\n                return True\n            if board[i][j] != word[len_path]:",
+        "detail": "79_word_search",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "80_remove_duplicates_from_sorted_array_II",
+        "description": "80_remove_duplicates_from_sorted_array_II",
+        "peekOfCode": "class Solution:\n    # My sol: use a flag to flag whether the second occurance of a number has occurred\n    def removeDuplicates1(self, nums: list[int]) -> int:\n        k = 1 if len(nums) else 0\n        flag = 0\n        for i in range(1, len(nums)):\n            if nums[i-1] != nums[i]:\n                nums[k] = nums[i]\n                k += 1\n                flag = 0",
+        "detail": "80_remove_duplicates_from_sorted_array_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "82_remove_duplicates_from_sorted_list_II",
+        "description": "82_remove_duplicates_from_sorted_list_II",
+        "peekOfCode": "class Solution:\n    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        appeared = set()\n        remove = set()\n        dummy = ListNode()\n        dummy.next = head\n        temp = head\n        while temp:\n            if temp.val in appeared:\n                remove.add(temp.val)",
+        "detail": "82_remove_duplicates_from_sorted_list_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "86_partition_list",
+        "description": "86_partition_list",
+        "peekOfCode": "class Solution:\n    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:\n        dummy1 = h1 = ListNode()\n        dummy2 = h2 = ListNode()\n        while head:\n            if head.val < x:\n                h1.next = head\n                h1 = h1.next\n            else:\n                h2.next = head",
+        "detail": "86_partition_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "88_merge_sorted_array",
+        "description": "88_merge_sorted_array",
+        "peekOfCode": "class Solution:\n    def merge1(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums1 in-place instead.\n        \"\"\"\n        i = m-1\n        j = n-1\n        idx = m+n-1\n        while (idx >= 0):\n            if i < 0:",
+        "detail": "88_merge_sorted_array",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "92_reverse_linked_list_II",
+        "description": "92_reverse_linked_list_II",
+        "peekOfCode": "class Solution:\n    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:\n        curr = head\n        cnt = 1\n        left_node = None\n        prev_left_node = None\n        prev = None\n        while curr:\n            temp = curr.next\n            if cnt == left - 1:",
+        "detail": "92_reverse_linked_list_II",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "9_palindrome_number",
+        "description": "9_palindrome_number",
+        "peekOfCode": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        xstr = str(x)\n        n = len(xstr)\n        for i in range(n // 2):\n            if xstr[i] != xstr[~i]:\n                return False\n        return True",
+        "detail": "9_palindrome_number",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "async_test",
+        "description": "async_test",
+        "peekOfCode": "tasks = [process_data2(), fetch_data2()]\nasyncio.run(asyncio.wait(tasks))",
+        "detail": "async_test",
+        "documentation": {}
+    },
+    {
+        "label": "decorator",
+        "kind": 2,
+        "importPath": "decorator",
+        "description": "decorator",
+        "peekOfCode": "def decorator(func):\n    def wrapper():\n        print(\"Before function execution\")\n        func()\n        print(\"After function execution\")\n    return wrapper\n@decorator\ndef say_hello():\n    print(\"Hello!\")\nsay_hello()",
+        "detail": "decorator",
+        "documentation": {}
+    },
+    {
+        "label": "say_hello",
+        "kind": 2,
+        "importPath": "decorator",
+        "description": "decorator",
+        "peekOfCode": "def say_hello():\n    print(\"Hello!\")\nsay_hello()",
+        "detail": "decorator",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 2,
+        "importPath": "gin",
+        "description": "gin",
+        "peekOfCode": "def f():\n    a = 1\n    def g(): # g is a variable on f's stack frame\n        # by defining g in f,\n        # g needs to capture f's current stack frame, but the stack frame is mutable, so if a changes later, \n        # a in g will also change\n        # nonlocal a states that the a used in g is not the a in g\n        # stack frame is an object (meaning that something else may hold the address of this stack frame)\n        return a\n    a = 2",
+        "detail": "gin",
+        "documentation": {}
+    },
+    {
+        "label": "memo",
+        "kind": 2,
+        "importPath": "gin_decorator",
+        "description": "gin_decorator",
+        "peekOfCode": "def memo(n):\n    print(n)\n    def memo_inner(f):\n        # def wrapper(*args, **kwargs):\n        #     print(f\"args: {args}\")\n        #     print(f\"kwargs: {kwargs}\")\n        #     return f(*args, **kwargs)\n        # return wrapper\n        # return lambda x, y, z, a: f(x, y, z, a)\n        return f",
+        "detail": "gin_decorator",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 2,
+        "importPath": "gin_decorator",
+        "description": "gin_decorator",
+        "peekOfCode": "def f(d, b, c, mn):\n    a = 0\n    def g():\n        nonlocal a\n        a += 2\n        return a\n    a += 1\n    print(f\"g() inside f: {g()}\")\n    return g\n# print(f)",
+        "detail": "gin_decorator",
+        "documentation": {}
+    },
+    {
+        "label": "xs",
+        "kind": 5,
+        "importPath": "gin_decorator",
+        "description": "gin_decorator",
+        "peekOfCode": "xs = { 0, 1, 2 }\nprint(f(*xs, mn=3)())",
+        "detail": "gin_decorator",
+        "documentation": {}
+    },
+    {
+        "label": "memo",
+        "kind": 2,
+        "importPath": "gin_decorator2",
+        "description": "gin_decorator2",
+        "peekOfCode": "def memo(n):\n    print(n)\n    def memo_inner(f):\n        # def wrapper(*args, **kwargs):\n        #     print(f\"args: {args}\")\n        #     print(f\"kwargs: {kwargs}\")\n        #     return f(*args, **kwargs)\n        # return wrapper\n        # return lambda x, y, z, a: f(x, y, z, a)\n        return f",
+        "detail": "gin_decorator2",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 2,
+        "importPath": "gin_decorator2",
+        "description": "gin_decorator2",
+        "peekOfCode": "def f(d, b, c, mn):\n    a = 0\n    def g():\n        nonlocal a\n        a += 2\n        return a\n    a += 1\n    print(f\"g() inside f: {g()}\")\n    return g\n# print(f)",
+        "detail": "gin_decorator2",
+        "documentation": {}
+    },
+    {
+        "label": "xs",
+        "kind": 5,
+        "importPath": "gin_decorator2",
+        "description": "gin_decorator2",
+        "peekOfCode": "xs = { 0, 1, 2 }\nprint(f(*xs, mn=3)())",
+        "detail": "gin_decorator2",
+        "documentation": {}
+    },
+    {
+        "label": "line",
+        "kind": 5,
+        "importPath": "stdin",
+        "description": "stdin",
+        "peekOfCode": "line = sys.stdin.readline().strip()\nprint(line)\nlines = sys.stdin.read()\nprint(lines)\nwhile True:\n    line = sys.stdin.readline()\n    if not line:  # Break on EOF (empty string)\n        break\n    print(f\"Line: {line.strip()}\")",
+        "detail": "stdin",
+        "documentation": {}
+    },
+    {
+        "label": "lines",
+        "kind": 5,
+        "importPath": "stdin",
+        "description": "stdin",
+        "peekOfCode": "lines = sys.stdin.read()\nprint(lines)\nwhile True:\n    line = sys.stdin.readline()\n    if not line:  # Break on EOF (empty string)\n        break\n    print(f\"Line: {line.strip()}\")",
+        "detail": "stdin",
+        "documentation": {}
+    },
+    {
+        "label": "num",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "num = int(sys.stdin.readline())\nnums = sys.stdin.readline().split()\nnums = [int(n) for n in nums]\nmul = 1\nfor i in range(num):\n    mul = mul * nums[i]\nall_mul = mul\ncnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "nums = sys.stdin.readline().split()\nnums = [int(n) for n in nums]\nmul = 1\nfor i in range(num):\n    mul = mul * nums[i]\nall_mul = mul\ncnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10\n    cnt += 1",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "nums = [int(n) for n in nums]\nmul = 1\nfor i in range(num):\n    mul = mul * nums[i]\nall_mul = mul\ncnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10\n    cnt += 1\nans = cnt",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "mul",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "mul = 1\nfor i in range(num):\n    mul = mul * nums[i]\nall_mul = mul\ncnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10\n    cnt += 1\nans = cnt\nfor i in range(num):",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "all_mul",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "all_mul = mul\ncnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10\n    cnt += 1\nans = cnt\nfor i in range(num):\n    temp = int(all_mul / nums[i])\n    temp = temp * (nums[i]+1)\n    # temp = 1",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "cnt",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "cnt = 0\nwhile mul % 10 == 0:\n    mul = mul // 10\n    cnt += 1\nans = cnt\nfor i in range(num):\n    temp = int(all_mul / nums[i])\n    temp = temp * (nums[i]+1)\n    # temp = 1\n    # for j in range(num):",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "ans",
+        "kind": 5,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "ans = cnt\nfor i in range(num):\n    temp = int(all_mul / nums[i])\n    temp = temp * (nums[i]+1)\n    # temp = 1\n    # for j in range(num):\n    #     if j == i:\n    #         temp = temp * (nums[j] + 1)\n    #     else:\n    #         temp = temp * nums[j]",
+        "detail": "temp",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "unpack",
+        "description": "unpack",
+        "peekOfCode": "a = [[0,1],[2,3]]\nprint(*a)\nprint(list(zip(*a)))\nprint(list(zip([0,1],[2,3])))\nprint([0,1],[2,3])\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint(matrix.pop(0)) # output [1, 2, 3]\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\na = matrix.pop()\nprint(a) # output [7,8,9]",
+        "detail": "unpack",
+        "documentation": {}
+    },
+    {
+        "label": "matrix",
+        "kind": 5,
+        "importPath": "unpack",
+        "description": "unpack",
+        "peekOfCode": "matrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint(matrix.pop(0)) # output [1, 2, 3]\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\na = matrix.pop()\nprint(a) # output [7,8,9]\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint([1] + matrix.pop())",
+        "detail": "unpack",
+        "documentation": {}
+    },
+    {
+        "label": "matrix",
+        "kind": 5,
+        "importPath": "unpack",
+        "description": "unpack",
+        "peekOfCode": "matrix = [[1,2,3],[4,5,6],[7,8,9]]\na = matrix.pop()\nprint(a) # output [7,8,9]\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint([1] + matrix.pop())",
+        "detail": "unpack",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "unpack",
+        "description": "unpack",
+        "peekOfCode": "a = matrix.pop()\nprint(a) # output [7,8,9]\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint([1] + matrix.pop())",
+        "detail": "unpack",
+        "documentation": {}
+    },
+    {
+        "label": "matrix",
+        "kind": 5,
+        "importPath": "unpack",
+        "description": "unpack",
+        "peekOfCode": "matrix = [[1,2,3],[4,5,6],[7,8,9]]\nprint([1] + matrix.pop())",
+        "detail": "unpack",
+        "documentation": {}
+    }
+]
