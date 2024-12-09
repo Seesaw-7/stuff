@@ -960,6 +960,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "637_average_of_levels_in_binary_tree",
+        "description": "637_average_of_levels_in_binary_tree",
+        "peekOfCode": "class Solution:\n    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:\n        ans = []\n        nodes = deque()\n        nodes.append((root, 0))\n        sumlevel = 0\n        numlevel = 0\n        while nodes:\n            curr, l = nodes.popleft()\n            if curr.left:",
+        "detail": "637_average_of_levels_in_binary_tree",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "63_unique_paths_II",
         "description": "63_unique_paths_II",
         "peekOfCode": "class Solution:\n    def uniquePathsWithObstacles(self, obstacleGrid:list[list[int]]) -> int:\n        m = len(obstacleGrid)\n        n = len(obstacleGrid[0])\n        dp = [[0 for _ in range(n)] for _ in range(m)]\n        for i in range(m):\n            for j in range(n):\n                if obstacleGrid[i][j] == 1:\n                    continue\n                if i == 0 and j == 0:",
