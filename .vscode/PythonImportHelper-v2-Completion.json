@@ -420,6 +420,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "149_max_points_on_a_line",
+        "description": "149_max_points_on_a_line",
+        "peekOfCode": "class Solution:\n    # 12 mins O(N^3)\n    def maxPoints(self, points: list[list[int]]) -> int:\n        num = len(points)\n        if num == 0 or num == 1:\n            return num\n        max_val = 2\n        for i, p1 in enumerate(points):\n            for j in range(i+1, num):\n                p2 = points[j]",
+        "detail": "149_max_points_on_a_line",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "14_longest_common_prefix",
         "description": "14_longest_common_prefix",
         "peekOfCode": "class Solution:\n    def longestCommonPrefix1(self, strs: list[str]) -> str:\n        common = strs[0]\n        for s in strs:\n            while not s.startswith(common):\n                common = common[:-1]\n        return common\n    # Divide and conquer, copied from lc solutions\n    # https://leetcode.com/problems/longest-common-prefix/solutions/3224599/easy-and-simple-way-to-find-longest-common-prefix-python-3/?envType=study-plan-v2&envId=top-interview-150\n    def longestCommonPrefix(self, strs: list[str]) -> str:",
@@ -505,6 +514,15 @@
         "description": "173_binary_search_tree_iterator",
         "peekOfCode": "class BSTIterator:\n    def __init__(self, root: Optional[TreeNode]):\n        self.stack = []\n        self.it = root\n        while self.it.left:\n            temp = self.it.left\n            self.it.left = None\n            self.stack.append(self.it)\n            self.it = temp\n        init = TreeNode(self.it.val-1)",
         "detail": "173_binary_search_tree_iterator",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "17_letter_combinations_of_a_phone_number",
+        "description": "17_letter_combinations_of_a_phone_number",
+        "peekOfCode": "class Solution:\n    # iteration\n    def letterCombinations1(self, digits: str) -> List[str]:\n        com = {\"2\":\"abc\", \"3\":\"def\", \"4\":\"ghi\", \"5\":\"jkl\", \"6\":\"mno\", \"7\":\"pqrs\", \"8\":\"tuv\",\"9\":\"wxyz\"}\n        if not digits:\n            return []\n        ans = [\"\"]\n        for d in digits:\n            new_ans = []\n            for a in ans:",
+        "detail": "17_letter_combinations_of_a_phone_number",
         "documentation": {}
     },
     {
@@ -991,6 +1009,15 @@
         "description": "66_plus_one",
         "peekOfCode": "class Solution:\n    def isPalindrome(self, x: int) -> bool:\n        xstr = str(x)\n        n = len(xstr)\n        for i in range(n // 2):\n            if xstr[i] != xstr[~i]:\n                return False\n        return True",
         "detail": "66_plus_one",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "67_add_binary",
+        "description": "67_add_binary",
+        "peekOfCode": "class Solution:\n    # 16 mins\n    def addBinary(self, a: str, b: str) -> str:\n        ans = []\n        carrier = 0\n        i = len(a) - 1\n        j = len(b) - 1\n        while carrier or i >= 0  or j >= 0:\n            print(i, j, carrier)\n            if i < 0 and j < 0:",
+        "detail": "67_add_binary",
         "documentation": {}
     },
     {

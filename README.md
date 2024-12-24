@@ -19,6 +19,9 @@ problems with other solutions
 
 42 202 117 114
 
+problems not included
+76 199 530 200 17 
+
 ## Array/String
 
 ### 80 Remove Duplicates from Sorted Array II
@@ -372,6 +375,8 @@ Greedy BFS
 
 - Recursion is a tool, while backtrack is a strategy. Backtrack involves exploring possible solutions, abandoning ("backtracking" from) paths that do not lead to a valid solution, and proceeding to alternative paths. We often abandon an invalid path at the very first of the function code, and proceed to further layer without checking path validity. We often do not check validity before proceeding to further layer, cuz we'll need to handle too many checks.
 
+- Instead of conditions in all directions, try early stopping at the very begining in the next call
+
 ## Math
 
 ### 172 Factorial Trailing Zeros
@@ -381,6 +386,10 @@ The number of trailing zeros is min(num2, num5), which is always num5
 ### 69 Sqrt(x)
 
 Use binary search
+
+### 149 Max Points On a Line
+
+for every point, use a hashtable to store the slope that can be built by itself and every other point
 
 ## 1D DP
 

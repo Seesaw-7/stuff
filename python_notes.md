@@ -1253,6 +1253,17 @@ return l or r
   Peek front: Use `deque[0]` to peek at the first element.
   Peek back: Use `deque[-1]` to peek at the last element.
 
+## Bit Manipulation
+
+### 67 Add Binary
+
+`str` can be converted to `list`
+`a = list(a)`
+
+### 190 Reverse Bits
+
+`bin_n = bin(n)[2:]` The type of `bin(n)` is `str`
+
 ## 1D DP
 
 ### 198 House Robber
