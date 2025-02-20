@@ -690,6 +690,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "24_swap_nodes_in_pairs",
+        "description": "24_swap_nodes_in_pairs",
+        "peekOfCode": "class Solution:\n    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        temp = head\n        prev = None\n        while temp and temp.next:\n            next_temp = temp.next.next\n            if prev:\n                prev.next = temp.next\n            else:\n                head = temp.next",
+        "detail": "24_swap_nodes_in_pairs",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "25_reverse_nodes_in_k-group",
         "description": "25_reverse_nodes_in_k-group",
         "peekOfCode": "class Solution:\n    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\n        dummyhead = ListNode()\n        dummyhead.next = head\n        prev, curr = dummyhead, head\n        while True:\n            cnt = 1\n            left_reserved = curr\n            while curr and cnt < k:\n                curr = curr.next",
